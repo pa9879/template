@@ -1,0 +1,299 @@
+//Borders, margins and  other stuff
+/*My own classes*/
+
+.is-borderless {
+    border: none;
+}
+
+.is-paddingless {
+    padding: 0;
+}
+
+.is-borderless-hover:hover {
+    border: none;
+}
+
+.is-paddingless-hover:hover {
+    padding: 0;
+}
+
+.is-borderless-active:active {
+    border: none;
+}
+
+.is-paddingless-active:active {
+    padding: 0;
+}
+
+@for $i from 1 to 5 {
+    .has-margin-#{$i*5} {
+        margin: $i*5px;
+    }
+    .has-margin-top-#{$i*5} {
+        margin-top: $i*5px;
+    }
+    .has-margin-left-#{$i*5} {
+        margin-left: $i*5px;
+    }
+    .has-margin-right-#{$i*5} {
+        margin-right: $i*5px;
+    }
+    .has-margin-bottom-#{$i*5} {
+        margin-bottom: $i*5px;
+    }
+    .has-margin-top-only-#{$i*5} {
+        margin: 0;
+        margin-top: $i*5px;
+    }
+    .has-margin-left-only-#{$i*5} {
+        margin: 0;
+        margin-left: $i*5px;
+    }
+    .has-margin-right-only-#{$i*5} {
+        margin: 0;
+        margin-right: $i*5px;
+    }
+    .has-margin-bottom-only-#{$i*5} {
+        margin: 0;
+        margin-bottom: $i*5px;
+    }
+    .has-padding-#{$i*5} {
+        padding: $i*5px;
+    }
+    .has-padding-top-#{$i*5} {
+        padding-top: $i*5px;
+    }
+    .has-padding-left-#{$i*5} {
+        padding-left: $i*5px;
+    }
+    .has-padding-right-#{$i*5} {
+        padding-right: $i*5px;
+    }
+    .has-padding-bottom-#{$i*5} {
+        padding-bottom: $i*5px;
+    }
+    .has-padding-top-only-#{$i*5} {
+        padding: 0;
+        padding-top: $i*5px;
+    }
+    .has-padding-left-only-#{$i*5} {
+        padding: 0;
+        padding-left: $i*5px;
+    }
+    .has-padding-right-only-#{$i*5} {
+        padding: 0;
+        padding-right: $i*5px;
+    }
+    .has-padding-bottom-only-#{$i*5} {
+        padding: 0;
+        padding-bottom: $i*5px;
+    }
+    .has-border-radius-#{$i*5} {
+        border-radius: $i*5px;
+    }
+    .has-border-top-left-radius-#{$i*5} {
+        border-top-left-radius: $i*5px;
+    }
+    .has-border-top-left-radius-only-#{$i*5} {
+        border-radius: 0;
+        border-top-left-radius: $i*5px;
+    }
+    .has-border-top-right-radius-#{$i*5} {
+        border-top-right-radius: $i*5px;
+    }
+    .has-border-top-right-radius-only-#{$i*5} {
+        border-radius: 0;
+        border-top-right-radius: $i*5px;
+    }
+    .has-border-bottom-left-radius-#{$i*5} {
+        border-bottom-left-radius: $i*5px;
+    }
+    .has-border-bottom-left-radius-only-#{$i*5} {
+        border-radius: 0;
+        border-bottom-left-radius: $i*5px;
+    }
+    .has-border-bottom-right-radius-#{$i*5} {
+        border-bottom-right-radius: $i*5px;
+    }
+    .has-border-bottom-right-radius-only-#{$i*5} {
+        border-radius: 0;
+        border-bottom-right-radius: $i*5px;
+    }
+}
+
+$colorList: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "link": ($link, $link-invert), "info": ($info, $info-invert), "success": ($success, $success-invert), "warning": ($warning, $warning-invert), "danger": ($danger, $danger-invert));
+@each $item,
+$valueList in $colorList {
+    .has-border-#{$item} {
+        border: solid nth($valueList, 1);
+    }
+    .has-border-top-#{$item} {
+        border-top: solid nth($valueList, 1);
+    }
+    .has-border-top-only-#{$item} {
+        border: none;
+        border-top: solid nth($valueList, 1);
+    }
+    .has-border-top-hover-#{$item}:hover {
+        border-top: solid nth($valueList, 1);
+    }
+    .has-border-top-only-hover-#{$item}:hover {
+        border: none;
+        border-top: solid nth($valueList, 1);
+    }
+    .has-border-top-active-#{$item}:active {
+        border-top: solid nth($valueList, 1);
+    }
+    .has-border-top-only-active-#{$item}:active {
+        border: none;
+        border-top: solid nth($valueList, 1);
+    }
+    .has-border-left-#{$item} {
+        border-left: solid nth($valueList, 1);
+    }
+    .has-border-left-only-#{$item} {
+        border: none;
+        border-left: solid nth($valueList, 1);
+    }
+    .has-border-left-hover-#{$item}:hover {
+        border-left: solid nth($valueList, 1);
+    }
+    .has-border-left-only-hover-#{$item}:hover {
+        border: none;
+        border-left: solid nth($valueList, 1);
+    }
+    .has-border-left-active-#{$item}:active {
+        border-left: solid nth($valueList, 1);
+    }
+    .has-border-left-only-active-#{$item}:active {
+        border: none;
+        border-left: solid nth($valueList, 1);
+    }
+    .has-border-right-#{$item} {
+        border-right: solid nth($valueList, 1);
+    }
+    .has-border-right-only-#{$item} {
+        border: none;
+        border-right: solid nth($valueList, 1);
+    }
+    .has-border-right-hover-#{$item}:hover {
+        border-right: solid nth($valueList, 1);
+    }
+    .has-border-right-only-hover-#{$item}:hover {
+        border: none;
+        border-right: solid nth($valueList, 1);
+    }
+    .has-border-right-active-#{$item}:active {
+        border-right: solid nth($valueList, 1);
+    }
+    .has-border-right-only-active-#{$item}:active {
+        border: none;
+        border-right: solid nth($valueList, 1);
+    }
+    .has-border-bottom-#{$item} {
+        border-bottom: solid nth($valueList, 1);
+    }
+    .has-border-bottom-only-#{$item} {
+        border: none;
+        border-bottom: solid nth($valueList, 1);
+    }
+    .has-border-bottom-hover-#{$item}:hover {
+        border-bottom: solid nth($valueList, 1);
+    }
+    .has-border-bottom-only-hover-#{$item}:hover {
+        border: none;
+        border-bottom: solid nth($valueList, 1);
+    }
+    .has-border-bottom-active-#{$item}:active {
+        border-bottom: solid nth($valueList, 1);
+    }
+    .has-border-bottom-only-active-#{$item}:active {
+        border: none;
+        border-bottom: solid nth($valueList, 1);
+    }
+    .has-bar-#{$item} {
+        border: solid 5px nth($valueList, 1);
+    }
+    .has-bar-hover#{$item}:hover {
+        border: solid 5px nth($valueList, 1);
+    }
+    .has-bar-hover-only-#{$item}:hover {
+        border: none;
+        border: solid 5px nth($valueList, 1);
+    }
+    .has-bar-active#{$item}:active {
+        border: solid 5px nth($valueList, 1);
+    }
+    .has-bar-active-only-#{$item}:active {
+        border: none;
+        border: solid 5px nth($valueList, 1);
+    }
+    .has-leftbar-#{$item} {
+        border-left: solid 5px nth($valueList, 1);
+    }
+    .has-leftbar-hover#{$item}:hover {
+        border-left: solid 5px nth($valueList, 1);
+    }
+    .has-leftbar-hover-only-#{$item}:hover {
+        border: none;
+        border-left: solid 5px nth($valueList, 1);
+    }
+    .has-leftbar-active#{$item}:active {
+        border-left: solid 5px nth($valueList, 1);
+    }
+    .has-leftbar-active-only-#{$item}:active {
+        border: none;
+        border-left: solid 5px nth($valueList, 1);
+    }
+    .has-rightbar-#{$item} {
+        border-right: solid 5px nth($valueList, 1);
+    }
+    .has-rightbar-hover#{$item}:hover {
+        border-right: solid 5px nth($valueList, 1);
+    }
+    .has-rightbar-hover-only-#{$item}:hover {
+        border: none;
+        border-right: solid 5px nth($valueList, 1);
+    }
+    .has-rightbar-active#{$item}:active {
+        border-right: solid 5px nth($valueList, 1);
+    }
+    .has-rightbar-active-only-#{$item}:active {
+        border: none;
+        border-right: solid 5px nth($valueList, 1);
+    }
+    .has-bottombar-#{$item} {
+        border-bottom: solid 5px nth($valueList, 1);
+    }
+    .has-bottombar-hover#{$item}:hover {
+        border-bottom: solid 5px nth($valueList, 1);
+    }
+    .has-bottombar-hover-only-#{$item}:hover {
+        border: none;
+        border-bottom: solid 5px nth($valueList, 1);
+    }
+    .has-bottombar-active#{$item}:active {
+        border-bottom: solid 5px nth($valueList, 1);
+    }
+    .has-bottombar-active-only-#{$item}:active {
+        border: none;
+        border-bottom: solid 5px nth($valueList, 1);
+    }
+    .has-topbar-#{$item} {
+        border-top: solid 5px nth($valueList, 1);
+    }
+    .has-topbar-hover#{$item}:hover {
+        border-top: solid 5px nth($valueList, 1);
+    }
+    .has-topbar-hover-only-#{$item}:hover {
+        border: none;
+        border-top: solid 5px nth($valueList, 1);
+    }
+    .has-topbar-active#{$item}:active {
+        border-top: solid 5px nth($valueList, 1);
+    }
+    .has-topbar-active-only-#{$item}:active {
+        border: none;
+        border-top: solid 5px nth($valueList, 1);
+    }
+}
