@@ -8700,7 +8700,11 @@ label.panel-block {
   border-top: solid 5px #ff3860; }
 
 *::selection {
-  background-color: #ff3860; }
+  background-color: #ff3860;
+  color: white; }
+
+.hero .breadcrumb a:hover {
+  opacity: 0.5; }
 
 .is-border-box {
   box-sizing: border-box; }
@@ -8719,5 +8723,9 @@ label.panel-block {
 
 .hero-heavy {
   font-size: 5em; }
+
+#particles-js {
+  height: 100vh;
+  background: cornflowerblue; }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,79 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style/css/style.css" type="text/css">
     <title>Document</title>
     <style>
-        .children {
-            height: 150px;
-            width: 150px;
-        }
-
-        #item1,
-        #item2,
-        #item3,
-        #item4 {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            transition: 1s;
-            backface-visibility: visible;
-        }
-
-        #item1 {
-            z-index: 2000
-        }
-
-        #item2 {
-            z-index: 1999
-        }
-
-        #item3 {
-            z-index: 1998
-        }
-
-        #item4 {
-            z-index: 2001
-        }
-
-        @keyframes animateY {
-            from {
-                transform: initial
-            }
-            to {
-                transform-origin: right;
-                transform: rotateY(180deg)
-            }
-        }
-
-        @keyframes animateX {
-            from {
-                transform: initial
-            }
-            to {
-                transform-origin: bottom;
-                transform: rotateX(180deg)
-            }
-        }
-
-        .parent:hover #item2 {
-            animation: animateY 500ms forwards;
+        #particles-js {
+            background: cornflowerblue;
+            height: 100vh;
         }
     </style>
+    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
-    <div class="parent">
-        <div class="children has-background-danger" id="item1"></div>
-        <div class="children has-background-warning" id="item2"></div>
-        <div class="children has-background-info" id="item3"></div>
-        <div class="children has-background-link" id="item4"></div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div id="particles-js"></div>
     <script>
-        $(".parent").hover(function () {
-
-        })
+        particlesJS('particles-js');
     </script>
 </body>
 

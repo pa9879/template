@@ -3,6 +3,15 @@
 @import "bordersAndSpacing.scss";
 *::selection {
     background-color: $danger;
+    color: white;
+}
+
+.hero {
+    .breadcrumb {
+        a:hover {
+            opacity: 0.5;
+        }
+    }
 }
 
 .is-border-box {
@@ -17,4 +26,9 @@
 
 .hero-heavy {
     font-size: 5em;
+}
+
+#particles-js {
+    height: 100vh;
+    background: cornflowerblue;
 }
