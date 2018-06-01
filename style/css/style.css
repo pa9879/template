@@ -8724,8 +8724,17 @@ label.panel-block {
 .hero-heavy {
   font-size: 5em; }
 
+#hero-top {
+  background: transparent !important; }
+
 #particles-js {
+  position: absolute;
+  opacity: 1;
+  background: linear-gradient(141deg, #1f191a 0%, #363636 71%, #46403f 100%);
+  top: 0;
+  left: 0;
+  z-index: -1;
   height: 100vh;
-  background: cornflowerblue; }
+  width: 100vw; }
 
 /*# sourceMappingURL=style.css.map */

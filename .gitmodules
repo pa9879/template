@@ -1,3 +1,6 @@
 [submodule "bulma"]
 	path = bulma
 	url = https://github.com/jgthms/bulma.git
+[submodule "particles.js"]
+	path = particles.js
+	url = https://github.com/VincentGarreau/particles.js.git
