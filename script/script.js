@@ -1,3 +1,9 @@
+// Set scroll to top
+$(window).on('beforeunload', function () {
+    $(window).scrollTop(0);
+});
+
+//Particle Background
 particlesJS("particles-js", {
     "particles": {
         "number": {
@@ -107,4 +113,69 @@ particlesJS("particles-js", {
         }
     },
     "retina_detect": true
+});
+
+//Sticky dividers
+function scrollCheck(fixedElement, parent) {
+    if (window.matchMedia('(min-width: 1101px)').matches) {
+
+        var correction = parseInt($("#main-nav").css("height"));
+        var topLimit = parent.position().top - correction;
+        var bottomLimit = topLimit + parseInt(parent.css("height")) - parseInt(fixedElement.css("height"));
+
+        var check = $(this).scrollTop();
+        if (check < topLimit) {
+            if (!fixedElement.hasClass("at-top")) {
+                fixedElement.addClass("at-top");
+            }
+            if (fixedElement.hasClass("fixed-top")) {
+                fixedElement.removeClass("fixed-top");
+            }
+            if (fixedElement.hasClass("at-bottom")) {
+                fixedElement.removeClass("at-bottom");
+            }
+        } else if (check >= topLimit && check <= bottomLimit) {
+            if (fixedElement.hasClass("at-top")) {
+                fixedElement.removeClass("at-top");
+            }
+            if (!fixedElement.hasClass("fixed-top")) {
+                fixedElement.addClass("fixed-top");
+            }
+            if (fixedElement.hasClass("at-bottom")) {
+                fixedElement.removeClass("at-bottom");
+            }
+        } else if (check > bottomLimit) {
+            if (fixedElement.hasClass("at-top")) {
+                fixedElement.removeClass("at-top");
+            }
+            if (fixedElement.hasClass("fixed-top")) {
+                fixedElement.removeClass("fixed-top");
+            }
+            if (!fixedElement.hasClass("at-bottom")) {
+                fixedElement.addClass("at-bottom");
+            }
+        }
+    }
+}
+$(window).scroll(function () {
+    scrollCheck($("#first-a"), $("#first-container"));
+
+    var heroLimit = $("#hero-top").position().top + parseInt($("#hero-top").css("height"));
+    heroLimit -= 80;
+    console.log(heroLimit);
+    if ($(window).scrollTop() > heroLimit) {
+        $("#main-nav").css({
+            "opacity": "1",
+            "transition": "500ms"
+        });
+    } else {
+        $("#main-nav").css({
+            "opacity": "0",
+            "transition": "500ms"
+        });
+    }
+
+});
+$(window).resize(function () {
+    scrollCheck($("#first-a"), $("#first-container"));
 });
