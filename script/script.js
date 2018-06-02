@@ -157,9 +157,53 @@ function scrollCheck(fixedElement, parent) {
         }
     }
 }
+
+function scrollCheckOdd(fixedElement, parent) {
+    if (window.matchMedia('(min-width: 1101px)').matches) {
+
+        var correction = parseInt($("#main-nav").css("height"));
+        var topLimit = parent.position().top - correction;
+        var bottomLimit = topLimit + parseInt(parent.css("height")) - parseInt(fixedElement.css("height"));
+
+        var check = $(this).scrollTop();
+        if (check < topLimit) {
+            if (!fixedElement.hasClass("at-top-odd")) {
+                fixedElement.addClass("at-top-odd");
+            }
+            if (fixedElement.hasClass("fixed-top-odd")) {
+                fixedElement.removeClass("fixed-top-odd");
+            }
+            if (fixedElement.hasClass("at-bottom-odd")) {
+                fixedElement.removeClass("at-bottom-odd");
+            }
+        } else if (check >= topLimit && check <= bottomLimit) {
+            if (fixedElement.hasClass("at-top-odd")) {
+                fixedElement.removeClass("at-top-odd");
+            }
+            if (!fixedElement.hasClass("fixed-top-odd")) {
+                fixedElement.addClass("fixed-top-odd");
+            }
+            if (fixedElement.hasClass("at-bottom-odd")) {
+                fixedElement.removeClass("at-bottom-odd");
+            }
+        } else if (check > bottomLimit) {
+            if (fixedElement.hasClass("at-top-odd")) {
+                fixedElement.removeClass("at-top-odd");
+            }
+            if (fixedElement.hasClass("fixed-top-odd")) {
+                fixedElement.removeClass("fixed-top-odd");
+            }
+            if (!fixedElement.hasClass("at-bottom-odd")) {
+                fixedElement.addClass("at-bottom-odd");
+            }
+        }
+    }
+}
 $(window).scroll(function () {
     scrollCheck($("#first-a"), $("#first-container"));
+    scrollCheck($("#third-a"), $("#third-container"));
 
+    scrollCheckOdd($("#second-a"), $("#second-container"));
     var heroLimit = $("#hero-top").position().top + parseInt($("#hero-top").css("height"));
     heroLimit -= 80;
     console.log(heroLimit);
@@ -178,4 +222,6 @@ $(window).scroll(function () {
 });
 $(window).resize(function () {
     scrollCheck($("#first-a"), $("#first-container"));
+    scrollCheck($("#third-a"), $("#third-container"));
+    scrollCheckOdd($("#second-a"), $("#second-container"));
 });

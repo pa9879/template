@@ -31,7 +31,8 @@
 }
 
 .hero-heavy {
-    font-size: 5em;
+    font-size: 7em;
+    font-family: 'Dancing Script', cursive;
 }
 
 #hero-top {
@@ -68,7 +69,7 @@
 }
 
 .divider {
-    width: 50vw;
+    width: 50%;
     height: 100vh;
     font: {
         family: 'Dancing Script', cursive;
@@ -85,8 +86,13 @@
 
 .my-content {
     padding: 50px;
-    margin-left: 51vw;
+    margin-left: 51%;
     min-height: 100vh;
+}
+
+.my-content-odd {
+    margin: 0;
+    margin-right: 51%
 }
 
 @media all and (max-width: 1100px) {
@@ -116,14 +122,35 @@
 .at-top {
     position: absolute;
     top: 0;
+    left: 0;
 }
 
 .at-bottom {
     position: absolute;
     bottom: 0;
+    left: 0;
 }
 
 .fixed-top {
     position: fixed;
-    top: 4rem;
+    top: $navbar-height;
+    left: 0;
+}
+
+.at-top-odd {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.at-bottom-odd {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.fixed-top-odd {
+    position: fixed;
+    top: $navbar-height;
+    right: 0;
 }
