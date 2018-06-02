@@ -117,7 +117,7 @@ particlesJS("particles-js", {
 
 //Sticky dividers
 function scrollCheck(fixedElement, parent) {
-    if (window.matchMedia('(min-width: 1101px)').matches) {
+    if (window.matchMedia('(min-width: 769px)').matches) {
 
         var correction = parseInt($("#main-nav").css("height"));
         var topLimit = parent.position().top - correction;
@@ -159,7 +159,7 @@ function scrollCheck(fixedElement, parent) {
 }
 
 function scrollCheckOdd(fixedElement, parent) {
-    if (window.matchMedia('(min-width: 1101px)').matches) {
+    if (window.matchMedia('(min-width: 769px)').matches) {
 
         var correction = parseInt($("#main-nav").css("height"));
         var topLimit = parent.position().top - correction;
@@ -224,4 +224,12 @@ $(window).resize(function () {
     scrollCheck($("#first-a"), $("#first-container"));
     scrollCheck($("#third-a"), $("#third-container"));
     scrollCheckOdd($("#second-a"), $("#second-container"));
+
+    if ($(".navbar-burger").hasClass("active")) {
+        $(".navbar-burger").removeClass("active");
+    }
 });
+
+$(".navbar-burger").click(function () {
+    $(this).toggleClass("is-active");
+})

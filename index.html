@@ -23,14 +23,14 @@
                     <h3 class="subtitle is-capitalized">This is the subtitle to the heading</h3>
                 </div>
             </div>
-            <div class="hero-body">
+            <div class="hero-body is-paddingless">
                 <div class="container has-padding-5 has-text-centered">
                     <h1 class="hero-heavy">Welcome to the page</h1>
                 </div>
             </div>
-            <div class="hero-foot has-margin-bottom-10">
+            <div class="hero-foot is-hidden-mobile has-padding-bottom-10">
                 <div class="container has-padding-20">
-                    <nav class="breadcrumb is-size-5 is-hidden-touch has-bullet-separator is-centered is-large" aria-label="breadcrumbs">
+                    <nav class="breadcrumb is-size-5 has-bullet-separator is-centered is-large" aria-label="breadcrumbs">
                         <ul>
                             <li>
                                 <a href="#">Item1</a>
@@ -53,32 +53,39 @@
             </div>
         </div>
         <div id="particles-js" class="hero is-dark is-bold"></div>
-        <nav class="navbar is-dark is-hidden-touch is-fixed-top" id="main-nav" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-dark is-hidden-mobile is-fixed-top" id="main-nav" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
                     <img src="content/icon.ico" alt="The Company Logo">
+                    <span class="navbar-item is-uppercase has-text-white has-text-weight-semibold">Company Logo</span>
                 </a>
-                <span class="navbar-item is-uppercase has-text-weight-semibold">Company Logo</span>
+                <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
-            <div class="navbar-menu">
-                <div class="navbar-start">
-                </div>
-                <div class="navbar-end">
-                    <span class="navbar-item has-text-light">Item1</span>
-                    <span class="navbar-item has-text-light">Item2</span>
-                    <span class="navbar-item has-text-light">Item3</span>
-                    <span class="navbar-item has-text-light">Item4</span>
-                    <span class="navbar-item has-text-light">Item5</span>
-                </div>
+        </nav>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <span class="navbar-item has-text-light">Item1</span>
+                <span class="navbar-item has-text-light">Item2</span>
+                <span class="navbar-item has-text-light">Item3</span>
+                <span class="navbar-item has-text-light">Item4</span>
+                <span class="navbar-item has-text-light">Item5</span>
             </div>
+            <div class="navbar-end">
+            </div>
+        </div>
         </nav>
     </section>
     <section id="second-section">
         <div class="content-parent is-paddingless" id="first-container">
-            <div class="has-background-danger divider" id="first-a">
+            <div class="has-background-danger divider is-unselectable" id="first-a">
                 <h1 class="has-text-light">About Us</h1>
             </div>
-            <div class="has-background-danger divider-small">
+            <div class="has-background-danger is-unselectable divider-small">
                 <h1 class="has-text-light ">About Us</h1>
             </div>
             <div class="my-content" id="first-b ">
@@ -125,10 +132,10 @@
     </section>
     <section id="third-section">
         <div class="content-parent is-paddingless" id="second-container">
-            <div class="has-background-danger divider-small">
+            <div class="has-background-danger is-unselectable divider-small">
                 <h1 class="has-text-light ">About Us</h1>
             </div>
-            <div class="my-content my-content-odd" id="second-b ">
+            <div class="my-content my-content-odd" id="third-b ">
                 <h1 class="title is-uppercase has-text-centered ">Title of Section</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae massa ac arcu eleifend consectetur.
@@ -183,62 +190,187 @@
                     <img class="has-border-radius-5 " src="content/pexels-photo-800244.jpeg ">
                 </figure>
             </div>
-            <div class="has-background-danger divider divider-odd" id="second-a">
+            <div class="has-background-danger is-unselectable divider divider-odd" id="second-a">
                 <h1 class="has-text-light">About Us</h1>
             </div>
         </div>
     </section>
     <section id="fourth-section">
         <div class="content-parent is-paddingless" id="third-container">
-            <div class="has-background-danger divider" id="third-a">
+            <div class="has-background-danger is-unselectable divider" id="third-a">
                 <h1 class="has-text-light">About Us</h1>
             </div>
-            <div class="has-background-danger divider-small">
+            <div class="has-background-danger is-unselectable divider-small">
                 <h1 class="has-text-light ">About Us</h1>
             </div>
-            <div class="my-content" id="second-b">
-                <h1 class="title is-uppercase has-text-centered ">Title of Section</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae massa ac arcu eleifend consectetur.
-                    Cras ut est non mauris congue tristique a sit amet nisl. Nunc cursus at tellus mattis pharetra. Vivamus
-                    convallis, sapien at tincidunt facilisis, nisl nisl mollis nunc, a commodo enim diam eget nisl. Ut eu
-                    aliquet neque. Duis ornare aliquet felis a feugiat. Nullam auctor est vitae risus varius cursus. Maecenas
-                    mi lacus, aliquam a finibus in, condimentum eu leo. In fringilla odio at ultricies ultricies. Curabitur
-                    finibus rutrum nisl. Suspendisse libero erat, eleifend malesuada varius sit amet, vehicula ut arcu. Quisque
-                    dapibus urna a aliquam semper. Sed eu eros eu sapien dapibus sagittis ac ut diam. Phasellus vitae pulvinar
-                    purus.
-                </p>
-                <br>
-                <figure class="image ">
-                    <img class="has-border-radius-5 " src="content/pexels-photo-800244.jpeg ">
-                </figure>
-                <br>
-                <h1 class="title is-uppercase has-text-centered ">Title of Section</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae massa ac arcu eleifend consectetur.
-                    Cras ut est non mauris congue tristique a sit amet nisl. Nunc cursus at tellus mattis pharetra. Vivamus
-                    convallis, sapien at tincidunt facilisis, nisl nisl mollis nunc, a commodo enim diam eget nisl. Ut eu
-                    aliquet neque. Duis ornare aliquet felis a feugiat. Nullam auctor est vitae risus varius cursus. Maecenas
-                    mi lacus, aliquam a finibus in, condimentum eu leo. In fringilla odio at ultricies ultricies. Curabitur
-                    finibus rutrum nisl. Suspendisse libero erat, eleifend malesuada varius sit amet, vehicula ut arcu. Quisque
-                    dapibus urna a aliquam semper. Sed eu eros eu sapien dapibus sagittis ac ut diam. Phasellus vitae pulvinar
-                    purus.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae massa ac arcu eleifend consectetur.
-                    Cras ut est non mauris congue tristique a sit amet nisl. Nunc cursus at tellus mattis pharetra. Vivamus
-                    convallis, sapien at tincidunt facilisis, nisl nisl mollis nunc, a commodo enim diam eget nisl. Ut eu
-                    aliquet neque. Duis ornare aliquet felis a feugiat. Nullam auctor est vitae risus varius cursus. Maecenas
-                    mi lacus, aliquam a finibus in, condimentum eu leo. In fringilla odio at ultricies ultricies. Curabitur
-                    finibus rutrum nisl. Suspendisse libero erat, eleifend malesuada varius sit amet, vehicula ut arcu. Quisque
-                    dapibus urna a aliquam semper. Sed eu eros eu sapien dapibus sagittis ac ut diam. Phasellus vitae pulvinar
-                    purus.
-                </p>
+            <div class="my-content" id="third-b">
+                <div class="my-card-holder">
+                    <div class="my-card-front">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-title">Hello World</div>
+                                <div class="card-header-icon">
+                                    <img src="content/icon.ico" alt="icon" height="50" width="50">
+                                </div>
+                            </div>
+                            <div class="card-image">
+                                <img src="content/pexels-photo-800244.jpeg" alt="pexels">
+                            </div>
+                            <div class="card-content has-text-centered">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae
+                                massa ac arcu eleifend consectetur. Cras ut est non mauris congue tristique a sit amet nisl.
+                                Nunc cursus at tellus mattis pharetra. Vivamus convallis,
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="card-footer-item">Save</a>
+                                <a href="#" class="card-footer-item">Edit</a>
+                                <a href="#" class="card-footer-item">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-card-back">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-title">Hello World</div>
+                                <div class="card-header-icon">
+                                    <img src="content/icon.ico" alt="icon" height="50" width="50">
+                                </div>
+                            </div>
+                            <div class="card-image has-text-centered">
+                                <img src="content/iste_logo_start_tp.png" alt="pexels">
+                            </div>
+                            <div class="card-content has-text-centered">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae
+                                massa ac arcu eleifend consectetur. Cras ut est non mauris congue tristique a sit amet nisl.
+                                Nunc cursus at tellus mattis pharetra. Vivamus convallis,
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-card-holder">
+                    <div class="my-card-front">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-title">Hello World</div>
+                                <div class="card-header-icon">
+                                    <img src="content/icon.ico" alt="icon" height="50" width="50">
+                                </div>
+                            </div>
+                            <div class="card-image">
+                                <img src="content/pexels-photo-800244.jpeg" alt="pexels">
+                            </div>
+                            <div class="card-content has-text-centered">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae
+                                massa ac arcu eleifend consectetur. Cras ut est non mauris congue tristique a sit amet nisl.
+                                Nunc cursus at tellus mattis pharetra. Vivamus convallis,
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="card-footer-item">Save</a>
+                                <a href="#" class="card-footer-item">Edit</a>
+                                <a href="#" class="card-footer-item">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-card-back">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-title">Hello World</div>
+                                <div class="card-header-icon">
+                                    <img src="content/icon.ico" alt="icon" height="50" width="50">
+                                </div>
+                            </div>
+                            <div class="card-image has-text-centered">
+                                <img src="content/iste_logo_start_tp.png" alt="pexels">
+                            </div>
+                            <div class="card-content has-text-centered">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae
+                                massa ac arcu eleifend consectetur. Cras ut est non mauris congue tristique a sit amet nisl.
+                                Nunc cursus at tellus mattis pharetra. Vivamus convallis,
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-card-holder">
+                    <div class="my-card-front">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-title">Hello World</div>
+                                <div class="card-header-icon">
+                                    <img src="content/icon.ico" alt="icon" height="50" width="50">
+                                </div>
+                            </div>
+                            <div class="card-image">
+                                <img src="content/pexels-photo-800244.jpeg" alt="pexels">
+                            </div>
+                            <div class="card-content has-text-centered">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae
+                                massa ac arcu eleifend consectetur. Cras ut est non mauris congue tristique a sit amet nisl.
+                                Nunc cursus at tellus mattis pharetra. Vivamus convallis,
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="card-footer-item">Save</a>
+                                <a href="#" class="card-footer-item">Edit</a>
+                                <a href="#" class="card-footer-item">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-card-back">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-title">Hello World</div>
+                                <div class="card-header-icon">
+                                    <img src="content/icon.ico" alt="icon" height="50" width="50">
+                                </div>
+                            </div>
+                            <div class="card-image has-text-centered">
+                                <img src="content/iste_logo_start_tp.png" alt="pexels">
+                            </div>
+                            <div class="card-content has-text-centered">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae
+                                massa ac arcu eleifend consectetur. Cras ut est non mauris congue tristique a sit amet nisl.
+                                Nunc cursus at tellus mattis pharetra. Vivamus convallis,
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-card-holder">
+                    <div class="my-card-front">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-title">Hello World</div>
+                                <div class="card-header-icon">
+                                    <img src="content/icon.ico" alt="icon" height="50" width="50">
+                                </div>
+                            </div>
+                            <div class="card-image">
+                                <img src="content/pexels-photo-800244.jpeg" alt="pexels">
+                            </div>
+                            <div class="card-content has-text-centered">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae
+                                massa ac arcu eleifend consectetur. Cras ut est non mauris congue tristique a sit amet nisl.
+                                Nunc cursus at tellus mattis pharetra. Vivamus convallis,
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="card-footer-item">Save</a>
+                                <a href="#" class="card-footer-item">Edit</a>
+                                <a href="#" class="card-footer-item">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-card-back">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-title">Hello World</div>
+                                <div class="card-header-icon">
+                                    <img src="content/icon.ico" alt="icon" height="50" width="50">
+                                </div>
+                            </div>
+                            <div class="card-image has-text-centered">
+                                <img src="content/iste_logo_start_tp.png" alt="pexels">
+                            </div>
+                            <div class="card-content has-text-centered">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae
+                                massa ac arcu eleifend consectetur. Cras ut est non mauris congue tristique a sit amet nisl.
+                                Nunc cursus at tellus mattis pharetra. Vivamus convallis,
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
     </section>
-    <section class="section has-background-dark"></section>
     <script src="script/script.js "></script>
 </body>
 

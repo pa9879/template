@@ -8768,15 +8768,23 @@ label.panel-block {
   display: none; }
 
 .my-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 50px;
   margin-left: 51%;
   min-height: 100vh; }
 
 .my-content-odd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   margin-right: 51%; }
 
-@media all and (max-width: 1100px) {
+@media all and (max-width: 768px) {
   .divider {
     display: none; }
 
@@ -8824,5 +8832,48 @@ label.panel-block {
   position: fixed;
   top: 4rem;
   right: 0; }
+
+.my-card-holder {
+  cursor: pointer;
+  perspective: 1000px;
+  position: relative;
+  padding: 0;
+  margin-top: 50px;
+  max-width: 500px; }
+
+.my-card-back {
+  position: absolute;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: 500ms;
+  transform: rotateY(-180deg);
+  top: 0;
+  height: 100%; }
+
+.my-card-back .card {
+  height: 100%; }
+
+.my-card-front {
+  transition: 500ms;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden; }
+
+.my-card-holder:hover .my-card-front {
+  transform-style: preserve-3d;
+  transform: rotateY(180deg); }
+
+.my-card-holder:hover .my-card-back {
+  transform-style: preserve-3d;
+  transform: rotateY(0deg); }
+
+@media all and (min-width: 1472px) {
+  * {
+    font-size: 1.2em; }
+
+  .my-card-holder {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin-top: 100px; } }
 
 /*# sourceMappingURL=style.css.map */
