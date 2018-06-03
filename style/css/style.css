@@ -8704,6 +8704,14 @@ label.panel-block {
   background-color: #ff3860;
   color: white; }
 
+@keyframes shrink {
+  to {
+    transform: scale(0); } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .hero .breadcrumb a:hover {
   opacity: 0.5; }
 
@@ -8723,8 +8731,7 @@ label.panel-block {
   box-shadow: 0 8px 10px 0 #000; }
 
 #main-nav {
-  opacity: 0;
-  transition: 500ms; }
+  display: none; }
 
 .hero-heavy {
   font-size: 7em;
@@ -8740,7 +8747,8 @@ label.panel-block {
   top: 0;
   left: 0;
   z-index: -1;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 100vw; }
 
 .path {
@@ -8767,6 +8775,12 @@ label.panel-block {
 .divider-small {
   display: none; }
 
+.divider-half {
+  transition: width 1s;
+  width: 20vw !important; }
+  .divider-half h1 {
+    opacity: 0; }
+
 .my-content {
   display: flex;
   flex-direction: column;
@@ -8775,6 +8789,9 @@ label.panel-block {
   padding: 50px;
   margin-left: 51%;
   min-height: 100vh; }
+
+.card-disappear {
+  animation: shrink 1s 1s forwards; }
 
 .my-content-odd {
   display: flex;
@@ -8802,7 +8819,10 @@ label.panel-block {
     position: relative; }
 
   .my-content {
-    margin: 0; } }
+    margin: 0; }
+
+  .card-disappear {
+    animation: shrink 1s forwards; } }
 .at-top {
   position: absolute;
   top: 0;

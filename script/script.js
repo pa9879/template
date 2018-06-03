@@ -205,17 +205,15 @@ $(window).scroll(function () {
 
     scrollCheckOdd($("#second-a"), $("#second-container"));
     var heroLimit = $("#hero-top").position().top + parseInt($("#hero-top").css("height"));
-    heroLimit -= 80;
-    console.log(heroLimit);
+    heroLimit -= parseInt($("#main-nav").css("height")) + 50;
     if ($(window).scrollTop() > heroLimit) {
         $("#main-nav").css({
-            "opacity": "1",
-            "transition": "500ms"
+            "display": "flex",
+            "animation": "fadeIn 500ms"
         });
     } else {
         $("#main-nav").css({
-            "opacity": "0",
-            "transition": "500ms"
+            "display": "none",
         });
     }
 
@@ -232,4 +230,11 @@ $(window).resize(function () {
 
 $(".navbar-burger").click(function () {
     $(this).toggleClass("is-active");
-})
+});
+
+$(".my-card-holder").click(function () {
+    $("#third-a").addClass("divider-half");
+    $(".my-card-holder").each(function () {
+        $(this).addClass("card-disappear");
+    })
+});
