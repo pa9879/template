@@ -208,12 +208,11 @@ $(window).scroll(function () {
     heroLimit -= parseInt($("#main-nav").css("height")) + 50;
     if ($(window).scrollTop() > heroLimit) {
         $("#main-nav").css({
-            "display": "flex",
-            "animation": "fadeIn 500ms"
+            "visibility": "visible",
         });
     } else {
         $("#main-nav").css({
-            "display": "none",
+            "visibility": "hidden",
         });
     }
 
@@ -236,5 +235,16 @@ $(".my-card-holder").click(function () {
     $("#third-a").addClass("divider-half");
     $(".my-card-holder").each(function () {
         $(this).addClass("card-disappear");
-    })
+    });
+    $("#third-b").css({
+        "width": "80vw",
+        "margin-left": "20vw",
+        "transition": "1s",
+    });
+    $("#events").css({
+        "display": "block"
+    });
+    $('html, body').animate({
+        scrollTop: $("#third-b").offset().top - parseInt($("#main-nav").css("height"))
+    }, 2000);
 });

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/css/style.css" type="text/css">
+
+    <title>Document</title>
+    <style>
+        .my-card-holder {
+            perspective: 1000px;
+            position: relative;
+            padding: 0;
+            margin: 20px;
+        }
+
+        .my-card-back {
+            position: absolute;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            transition: 1s;
+            transform: rotateY(-180deg);
+            top: 0;
+            height: 100%;
+        }
+
+        .my-card-back .card {
+            height: 100%;
+        }
+
+        .my-card-front {
+            transition: 1s;
+            transform: rotateY(0deg);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+
+        .my-card-holder:hover .my-card-front {
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
+        }
+
+        .my-card-holder:hover .my-card-back {
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="columns is-centered">
+        <div class="column is-gapless my-card-holder is-4">
+            <div class="my-card-front">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-title">Hello World</div>
+                        <div class="card-header-icon">
+                            <img src="content/icon.ico" alt="icon" height="50" width="50">
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img src="content/pexels-photo-800244.jpeg" alt="pexels">
+                    </div>
+                    <div class="card-content has-text-centered">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae massa ac
+                        arcu eleifend consectetur. Cras ut est non mauris congue tristique a sit amet nisl. Nunc cursus at
+                        tellus mattis pharetra. Vivamus convallis,
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-footer-item">Save</a>
+                        <a href="#" class="card-footer-item">Edit</a>
+                        <a href="#" class="card-footer-item">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="my-card-back">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-title">Hello World</div>
+                        <div class="card-header-icon">
+                            <img src="content/icon.ico" alt="icon" height="50" width="50">
+                        </div>
+                    </div>
+                    <div class="card-image has-text-centered">
+                        <img src="content/iste_logo_start_tp.png" alt="pexels">
+                    </div>
+                    <div class="card-content has-text-centered">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae massa ac
+                        arcu eleifend consectetur. Cras ut est non mauris congue tristique a sit amet nisl. Nunc cursus at
+                        tellus mattis pharetra. Vivamus convallis,
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column my-card-holder is-4">
+            <div class="my-card-front">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-title">Hello World</div>
+                        <div class="card-header-icon">
+                            <img src="content/icon.ico" alt="icon" height="50" width="50">
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img src="content/pexels-photo-800244.jpeg" alt="pexels">
+                    </div>
+                    <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae massa ac
+                        arcu eleifend consectetur. Cras ut est non mauris congue tristique a sit amet nisl. Nunc cursus at
+                        tellus mattis pharetra. Vivamus convallis,
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-footer-item">Save</a>
+                        <a href="#" class="card-footer-item">Edit</a>
+                        <a href="#" class="card-footer-item">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

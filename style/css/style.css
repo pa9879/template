@@ -8707,11 +8707,21 @@ label.panel-block {
 @keyframes shrink {
   to {
     transform: scale(0); } }
+@keyframes grow {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
 @keyframes fadeIn {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 .hero .breadcrumb a:hover {
   opacity: 0.5; }
 
@@ -8731,7 +8741,7 @@ label.panel-block {
   box-shadow: 0 8px 10px 0 #000; }
 
 #main-nav {
-  display: none; }
+  visibility: hidden; }
 
 .hero-heavy {
   font-size: 7em;
@@ -8783,6 +8793,7 @@ label.panel-block {
 
 .my-content {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -8798,6 +8809,7 @@ label.panel-block {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   margin: 0;
   margin-right: 51%; }
 
@@ -8895,5 +8907,14 @@ label.panel-block {
     font-size: 1.1em;
     max-width: 800px;
     margin-top: 100px; } }
+#events {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: none;
+  animation: fadeIn 400ms 2s forwards;
+  height: 100%;
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
