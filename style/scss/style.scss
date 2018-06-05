@@ -7,26 +7,28 @@
     color: white;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 #navbar-overlay {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 700ms;
+    cursor: pointer;
+    display: none;
     height: 100vh;
     width: 100vw;
+    opacity: 0.3;
     position: fixed;
     top: 0;
     background-color: #000;
     z-index: 1400;
 }
 
-.overlay-active {
-    visibility: visible;
-    opacity: 0.3;
-    transition: opacity 700ms;
+#main-nav {
+    z-index: 1500 !important;
 }
 
-.navbar {
-    z-index: 1500 !important;
+.navbar-item {
+    transition: 300ms;
 }
 
 @keyframes shrink {
@@ -74,6 +76,11 @@
             opacity: 0.5;
         }
     }
+}
+
+.stop-scrolling {
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 .is-border-box {
@@ -298,7 +305,7 @@
     }
 }
 
-#events {
+#events-first {
     position: absolute;
     top: 0;
     left: 0;

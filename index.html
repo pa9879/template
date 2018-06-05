@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="is-overlay" id="navbar-overlay"></div>
+    <div id="navbar-overlay"></div>
     <section style="position: relative" id="first-section">
         <div class="hero is-fullheight is-dark is-unselectable" id="hero-top">
             <div class="hero-head">
@@ -34,19 +34,16 @@
                     <nav class="breadcrumb is-size-5 has-bullet-separator is-centered is-large" aria-label="breadcrumbs">
                         <ul>
                             <li>
-                                <a href="#">Item1</a>
+                                <a href="#second=section">Item1</a>
                             </li>
                             <li>
-                                <a href="#">Item2</a>
+                                <a href="#third-section">Item2</a>
                             </li>
                             <li>
-                                <a href="#">Item3</a>
+                                <a href="#fourth-section">Item3</a>
                             </li>
                             <li>
-                                <a href="#">Item4</a>
-                            </li>
-                            <li>
-                                <a href="#">Item5</a>
+                                <a href="#fifth-section">Item4</a>
                             </li>
                         </ul>
                     </nav>
@@ -66,15 +63,15 @@
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div class="navbar-menu has-background-dark">
+            <div class="navbar-menu">
                 <div class="navbar-start">
-                    <a href="#" class="navbar-item has-text-centered has-text-light">Item1</a>
-                    <a href="#" class="navbar-item has-text-centered has-text-light">Item2</a>
-                    <a href="#" class="navbar-item has-text-centered has-text-light">Item3</a>
-                    <a href="#" class="navbar-item has-text-centered has-text-light">Item4</a>
-                    <a href="#" class="navbar-item has-text-centered has-text-light">Item5</a>
                 </div>
-                <div class="navbar-end is-dark">
+                <div class="navbar-end">
+                    <a href="#first-section" class="navbar-item has-text-centered">Item1</a>
+                    <a href="#second-section" class="navbar-item has-text-centered">Item2</a>
+                    <a href="#third-section" class="navbar-item has-text-centered">Item3</a>
+                    <a href="#fourth-section" class="navbar-item has-text-centered">Item4</a>
+                    <a href="#fifth-section" class="navbar-item has-text-centered">Item5</a>
                 </div>
             </div>
         </nav>
@@ -370,7 +367,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="events" class="has-padding-20">
+                <div id="events-first" class="has-padding-20">
                     <article class="media">
                         <figure class="media-left">
                             <p class="image is-64x64">
@@ -413,6 +410,7 @@
             </div>
         </div>
     </section>
+    <section class="section is-large has-background-dark" id="fifth-section"></section>
     <script src="script/script.js "></script>
 </body>
 

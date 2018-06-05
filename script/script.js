@@ -120,7 +120,7 @@ $(document).ready(function () {
     function scrollCheck(fixedElement, parent) {
         if (window.matchMedia('(min-width: 768px)').matches) {
 
-            var correction = parseInt($("#main-nav").css("height"));
+            var correction = parseInt($("#main-nav .navbar-brand").css("height"));
             var topLimit = parent.position().top - correction;
             var bottomLimit = topLimit + parseInt(parent.css("height")) - parseInt(fixedElement.css("height"));
 
@@ -162,7 +162,7 @@ $(document).ready(function () {
     function scrollCheckOdd(fixedElement, parent) {
         if (window.matchMedia('(min-width: 768px)').matches) {
 
-            var correction = parseInt($("#main-nav").css("height"));
+            var correction = parseInt($("#main-nav .navbar-brand").css("height"));
             var topLimit = parent.position().top - correction;
             var bottomLimit = topLimit + parseInt(parent.css("height")) - parseInt(fixedElement.css("height"));
 
@@ -200,26 +200,38 @@ $(document).ready(function () {
             }
         }
     }
-    // Function to close the main nav menu
-    function navClose() {
-        var menu = $("#main-nav").find(".navbar-menu");
-        if (menu.hasClass("is-active")) {
-            menu.removeClass("is-active");
-        }
+    // Prevents scrolling of body
+    function prevent(event) {
+        event.preventDefault();
+        var scrolled = $(document).scrollTop();
+        $("body, html").animate({
+            scrollTop: scrolled
+        });
     }
     // Function to open the main navbar menu
     function navOpen() {
-        $("#navbar-overlay").toggleClass(".overlay-active", true);
+        $("#navbar-overlay").fadeIn("slow");
+        $("#main-nav .navbar-menu").toggleClass("is-active", true);
+        $("#main-nav .navbar-burger").toggleClass("is-active", true);
     }
+    // Function to close the main navbar menu
+    function navClose() {
+        $("#navbar-overlay").fadeOut("slow");
+        $("#main-nav .navbar-menu").toggleClass("is-active", false);
+        $("#main-nav .navbar-burger").toggleClass("is-active", false);
+        scrollCheck($("#first-a"), $("#first-container"));
+        scrollCheck($("#third-a"), $("#third-container"));
+        scrollCheckOdd($("#second-a"), $("#second-container"));
+    }
+
 
     $(window).scroll(function () {
         scrollCheck($("#first-a"), $("#first-container"));
         scrollCheck($("#third-a"), $("#third-container"));
-
         scrollCheckOdd($("#second-a"), $("#second-container"));
         // Making the navbar come and go.
         var heroLimit = $("#hero-top").position().top + parseInt($("#hero-top").css("height"));
-        heroLimit -= parseInt($("#main-nav").css("height")) + 30;
+        heroLimit -= parseInt($("#main-nav").css("height")) + 50;
         if ($(window).scrollTop() > heroLimit) {
             $("#main-nav").css({
                 "visibility": "visible",
@@ -227,71 +239,51 @@ $(document).ready(function () {
                 "transition": "700ms"
             });
         } else {
+            if ($("#main-nav .navbar-menu").hasClass("is-active")) {
+                navClose();
+            }
             $("#main-nav").css({
                 "visibility": "hidden",
                 "opacity": "0",
                 "transition": "700ms"
             });
         }
-
     });
+
     $(window).resize(function () {
-        scrollCheck($("#first-a"), $("#first-container"));
-        scrollCheck($("#third-a"), $("#third-container"));
-        scrollCheckOdd($("#second-a"), $("#second-container"));
+        navClose();
     });
-});
 
-$("#navbar-overlay").click(function () {
-    $("#main-nav").find(".navbar-menu").removeClass("is-active");
-    $(this).css({
-        "visibility": "hidden",
-        "opacity": "0",
-        "transition": "700ms"
+    $("#navbar-overlay").click(function () {
+        navClose();
     });
-    $("#main-nav").find(".navbar-burger").toggleClass("is-active");
-});
 
+    $(".navbar-burger").click(function () {
+        var navbar = $(this).parents(".navbar");
+        if (!navbar.find(".navbar-menu").hasClass("is-active")) {
+            navOpen();
+        } else if (navbar.find(".navbar-menu").hasClass("is-active")) {
+            navClose();
+        }
+    });
 
+    $(".my-card-holder").click(function () {
 
-$(".navbar-burger").click(function () {
-    $(this).toggleClass("is-active");
-
-
-    var navbar = $(this).parents(".navbar");
-    if (!navbar.find(".navbar-menu").hasClass("is-active")) {
-        navbar.find(".navbar-menu").addClass("is-active");
-        $("#navbar-overlay").css({
-            "visibility": "visible",
-            "opacity": "0.3",
-            "transition": "700ms"
+        $("#third-a").addClass("divider-half");
+        $(".my-card-holder").each(function () {
+            $(this).addClass("card-disappear");
         });
-    } else if (navbar.find(".navbar-menu").hasClass("is-active")) {
-        navbar.find(".navbar-menu").removeClass("is-active");
-        $("#navbar-overlay").css({
-            "visibility": "hidden",
-            "opacity": "0",
-            "transition": "700ms"
+
+        $("#third-b").css({
+            "width": "80vw",
+            "margin-left": "20vw",
+            "transition": "1s",
         });
-    }
-});
-
-$(".my-card-holder").click(function () {
-
-    $("#third-a").addClass("divider-half");
-    $(".my-card-holder").each(function () {
-        $(this).addClass("card-disappear");
+        $("#events-first").css({
+            "display": "block"
+        });
+        $('html, body').animate({
+            scrollTop: $("#third-b").offset().top - parseInt($("#main-nav").css("height"))
+        }, 500);
     });
-
-    $("#third-b").css({
-        "width": "80vw",
-        "margin-left": "20vw",
-        "transition": "1s",
-    });
-    $("#events").css({
-        "display": "block"
-    });
-    $('html, body').animate({
-        scrollTop: $("#third-b").offset().top - parseInt($("#main-nav").css("height"))
-    }, 500);
 });
