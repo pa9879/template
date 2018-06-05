@@ -200,25 +200,23 @@ $(document).ready(function () {
             }
         }
     }
-    // Prevents scrolling of body
-    function prevent(event) {
-        event.preventDefault();
-        var scrolled = $(document).scrollTop();
-        $("body, html").animate({
-            scrollTop: scrolled
-        });
-    }
     // Function to open the main navbar menu
     function navOpen() {
+        $(".navbar-end").wrap("<div class='container'></div>");
         $("#navbar-overlay").fadeIn("slow");
         $("#main-nav .navbar-menu").toggleClass("is-active", true);
         $("#main-nav .navbar-burger").toggleClass("is-active", true);
+        $("#main-nav .container").slideDown();
     }
     // Function to close the main navbar menu
     function navClose() {
+        $("#main-nav .container").slideUp();
         $("#navbar-overlay").fadeOut("slow");
-        $("#main-nav .navbar-menu").toggleClass("is-active", false);
-        $("#main-nav .navbar-burger").toggleClass("is-active", false);
+        setTimeout(function () {
+            $(".navbar-end").unwrap(".container");
+            $("#main-nav .navbar-menu").toggleClass("is-active", false);
+            $("#main-nav .navbar-burger").toggleClass("is-active", false);
+        }, 400);
         scrollCheck($("#first-a"), $("#first-container"));
         scrollCheck($("#third-a"), $("#third-container"));
         scrollCheckOdd($("#second-a"), $("#second-container"));
