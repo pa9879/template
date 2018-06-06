@@ -4599,10 +4599,10 @@ a.navbar-item,
 
   a.navbar-item.is-active,
   .navbar-link.is-active {
-    color: #0a0a0a; }
+    color: #0a0a0a !important; }
   a.navbar-item.is-active:not(:hover),
   .navbar-link.is-active:not(:hover) {
-    background-color: transparent; }
+    background-color: white !important; }
 
   .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
     background-color: #fafafa; } }
@@ -8707,6 +8707,22 @@ label.panel-block {
 body {
   overflow-x: hidden; }
 
+#menu-overlay {
+  cursor: pointer;
+  display: none;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1300; }
+  #menu-overlay .container {
+    width: 80%;
+    max-width: 700px; }
+
 #navbar-overlay {
   cursor: pointer;
   display: none;
@@ -8770,8 +8786,8 @@ body {
   box-shadow: 0 8px 10px 0 #000; }
 
 #main-nav {
-  visibility: hidden;
-  opacity: 0; }
+  visibility: visible;
+  opacity: 1; }
 
 .hero-heavy {
   font-size: 7em;
