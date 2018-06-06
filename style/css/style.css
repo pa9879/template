@@ -8707,22 +8707,6 @@ label.panel-block {
 body {
   overflow-x: hidden; }
 
-#menu-overlay {
-  cursor: pointer;
-  display: none;
-  opacity: 0;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1300; }
-  #menu-overlay .container {
-    width: 80%;
-    max-width: 700px; }
-
 #navbar-overlay {
   cursor: pointer;
   display: none;
@@ -8765,13 +8749,12 @@ body {
 .is-border-box {
   box-sizing: border-box; }
 
-@media screen and (max-width: 1087px) {
-  #main-nav .navbar-menu .container {
-    display: none; } }
 #main-nav .navbar-menu .navbar-item:hover {
   color: black;
   background: #fff;
   transition: 500ms; }
+#main-nav .container {
+  display: none; }
 
 .has-box-shadow-2 {
   box-shadow: 0 2px 10px 0 #000; }
@@ -8786,8 +8769,8 @@ body {
   box-shadow: 0 8px 10px 0 #000; }
 
 #main-nav {
-  visibility: visible;
-  opacity: 1; }
+  visibility: hidden;
+  opacity: 0; }
 
 .hero-heavy {
   font-size: 7em;
@@ -8836,6 +8819,32 @@ body {
   width: 20vw !important; }
   .divider-half h1 {
     opacity: 0; }
+
+.touch-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1200; }
+  .touch-menu #menu-overlay {
+    cursor: pointer;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1201; }
+  .touch-menu .container {
+    position: relative;
+    z-index: 1202;
+    width: 70%; }
 
 .my-content {
   display: flex;
@@ -8913,6 +8922,15 @@ body {
   position: fixed;
   top: 4rem;
   right: 0; }
+
+.menu-trigger {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  top: 20px;
+  left: 20px;
+  z-index: 1250;
+  border-radius: 50%; }
 
 .my-card-holder {
   cursor: pointer;

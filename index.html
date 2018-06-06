@@ -12,33 +12,65 @@
     <title>My Sample Site</title>
     <script src="particles.js/particles.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
 
 <body>
     <div id="navbar-overlay"></div>
-    <div id="menu-overlay">
-        <div class="container has-background-white has-border-radius-20 has-padding-top-20 has-padding-bottom-20">
+    <div class="menu-trigger is-hidden-tablet button is-large is-danger">
+        &#9776;
+    </div>
+    <div class="touch-menu is-hidden-tablet">
+        <div id="menu-overlay"></div>
+        <div class="container has-background-white has-border-radius-20 has-padding-10">
             <aside class="menu">
+                <p class="menu-label">
+                    Navigation Menu
+                </p>
                 <ul class="menu-list">
                     <li>
-                        <a href="#section-1" class="has-text-centered has-text-semibold menu-link">Item1</a>
+                        <a href="#section-1" class="has-text-centered has-text-semibold is-active menu-link">Home</a>
                     </li>
                     <li>
-                        <a href="#section-2" class="has-text-centered has-text-semibold menu-link">Item2</a>
+                        <a href="#section-2" class="has-text-centered has-text-semibold menu-link">Item1</a>
                     </li>
                     <li>
-                        <a href="#section-3" class="has-text-centered has-text-semibold menu-link">Item3</a>
+                        <a href="#section-3" class="has-text-centered has-text-semibold menu-link">Item2</a>
                     </li>
                     <li>
-                        <a href="#section-4" class="has-text-centered has-text-semibold menu-link">Item4</a>
+                        <a href="#section-4" class="has-text-centered has-text-semibold menu-link">Item3</a>
                     </li>
                     <li>
-                        <a href="#section-5" class="has-text-centered has-text-semibold menu-link">Item5</a>
+                        <a href="#section-5" class="has-text-centered has-text-semibold menu-link">Item4</a>
                     </li>
                 </ul>
             </aside>
         </div>
     </div>
+    <nav class="navbar is-dark is-hidden-mobile is-fixed-top" id="main-nav" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#section-1">
+                <img src="content/icon.ico" alt="The Company Logo">
+                <span class="navbar-item is-uppercase has-text-weight-semibold">Company Logo</span>
+            </a>
+            <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu is-paddingless">
+            <div class="navbar-start">
+            </div>
+            <div class="navbar-end">
+                <a href="#section-1" class="navbar-item is-active has-text-centered">Home</a>
+                <a href="#section-2" class="navbar-item has-text-centered">Item1</a>
+                <a href="#section-3" class="navbar-item has-text-centered">Item2</a>
+                <a href="#section-4" class="navbar-item has-text-centered">Item3</a>
+                <a href="#section-5" class="navbar-item has-text-centered">Item4</a>
+            </div>
+        </div>
+    </nav>
     <section style="position: relative" id="section-1">
         <div class="hero is-fullheight is-dark is-unselectable" id="hero-top">
             <div class="hero-head">
@@ -74,30 +106,6 @@
             </div>
         </div>
         <div id="particles-js" class="hero is-dark is-bold"></div>
-        <nav class="navbar is-dark is-hidden-mobile is-fixed-top" id="main-nav" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <img src="content/icon.ico" alt="The Company Logo">
-                    <span class="navbar-item is-uppercase has-text-weight-semibold">Company Logo</span>
-                </a>
-                <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <div class="navbar-menu">
-                <div class="navbar-start">
-                </div>
-                <div class="navbar-end">
-                    <a href="#section-1" class="navbar-item is-active has-text-centered">Home</a>
-                    <a href="#section-2" class="navbar-item has-text-centered">Item1</a>
-                    <a href="#section-3" class="navbar-item has-text-centered">Item2</a>
-                    <a href="#section-4" class="navbar-item has-text-centered">Item3</a>
-                    <a href="#section-5" class="navbar-item has-text-centered">Item4</a>
-                </div>
-            </div>
-        </nav>
     </section>
     <section id="section-2">
         <div class="content-parent is-paddingless" id="first-container">
@@ -432,7 +440,6 @@
         </div>
     </section>
     <section class="section is-large has-background-dark" id="section-5"></section>
-    <script src="script/jquery-scrollspy/scrollspy.js "></script>
     <script src="script/script.js "></script>
 </body>
 

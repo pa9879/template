@@ -2,7 +2,6 @@
 $(window).on('beforeunload', function () {
     $(window).scrollTop(0);
 });
-
 //Particle Background
 particlesJS("particles-js", {
     "particles": {
@@ -201,16 +200,17 @@ $(document).ready(function () {
         }
     }
     // Function to open the main navbar menu
+    // Function to open the main navbar menu
     function navOpen() {
         $(".navbar-end").wrap("<div class='container'></div>");
         $("#navbar-overlay").fadeIn("slow");
         $("#main-nav .navbar-menu").toggleClass("is-active", true);
         $("#main-nav .navbar-burger").toggleClass("is-active", true);
-        $("#main-nav .container").slideDown();
+        $("#main-nav .container").slideDown("fast");
     }
     // Function to close the main navbar menu
     function navClose() {
-        $("#main-nav .container").slideUp();
+        $("#main-nav .container").slideUp("fast");
         $("#navbar-overlay").fadeOut("slow");
         setTimeout(function () {
             $(".navbar-end").unwrap(".container");
@@ -221,6 +221,71 @@ $(document).ready(function () {
         scrollCheck($("#third-a"), $("#third-container"));
         scrollCheckOdd($("#second-a"), $("#second-container"));
     }
+    //Opening the mobile menu
+    function menuOpen() {
+        $(".touch-menu").css({
+            "visibility": "visible",
+            "opacity": "1",
+            "transition": "700ms"
+        });
+        $(".menu-trigger").css({
+            "transform": "scale(0)",
+            "transition": "700ms"
+        });
+    }
+
+    function menuClose() {
+        $(".touch-menu").css({
+            "visibility": "hidden",
+            "opacity": "0",
+            "transition": "700ms"
+        });
+        $(".menu-trigger").css({
+            "transform": "scale(1)",
+            "transition": "700ms"
+        });
+    }
+    $(".menu-trigger").click(function () {
+        menuOpen();
+    });
+    $("#menu-overlay").click(function () {
+        menuClose();
+    });
+    //Scrollspy
+    var lastScrollTop = 0;
+    $(window).scroll(function (event) {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            // Making the scrollspy for upscroll
+            $("section").each(function () {
+                var check = $(this).position().top;
+                var top = $(window).scrollTop();
+                var bottom = top + $(window).height();
+                if (check > top && check < bottom) {
+                    $(".navbar-item, .menu-list a").each(function () {
+                        $(this).removeClass("is-active");
+                    })
+                    var name = ".navbar-menu a[href='#" + $(this).attr("id") + "'] , .menu-list a[href='#" + $(this).attr("id") + "']";
+                    $(name).addClass("is-active");
+                }
+            });
+        } else {
+            // Making the scrollspy for downscroll
+            $("section").each(function () {
+                var check = $(this).position().top + parseInt($(this).css("height"));
+                var top = $(window).scrollTop();
+                var bottom = top + $(window).height();
+                if (check > top && check < bottom) {
+                    $(".navbar-item, .menu-list a").each(function () {
+                        $(this).removeClass("is-active");
+                    })
+                    var name = ".navbar-menu a[href='#" + $(this).attr("id") + "'] , .menu-list a[href='#" + $(this).attr("id") + "']";
+                    $(name).addClass("is-active");
+                }
+            });
+        }
+        lastScrollTop = st;
+    });
 
     $(window).scroll(function () {
         scrollCheck($("#first-a"), $("#first-container"));
@@ -235,33 +300,35 @@ $(document).ready(function () {
                 "opacity": "1",
                 "transition": "700ms"
             });
+            $(".menu-trigger").css({
+                "visibility": "visible",
+                "opacity": "1",
+                "transition": "700ms"
+            });
         } else {
             if ($("#main-nav .navbar-menu").hasClass("is-active")) {
                 navClose();
             }
+            $(".menu-trigger").css({
+                "opacity": "0",
+                "visibility": "hidden",
+                "transition": "700ms"
+            });
+            menuClose();
             $("#main-nav").css({
                 "visibility": "hidden",
                 "opacity": "0",
                 "transition": "700ms"
             });
         }
-        // Making the scrollspy
-        $("section").each(function () {
-            var check = $(this).position().top + parseInt($("#hero-top").css("height")) / 2;
-            var top = $(window).scrollTop();
-            var bottom = top + $(window).height();
-            if (check > top && check < bottom) {
-                $(".navbar-item").each(function () {
-                    $(this).removeClass("is-active");
-                })
-                var name = ".navbar-menu a[href='#" + $(this).attr("id") + "']";
-                $(name).addClass("is-active");
-            }
-        });
     });
 
     $(window).resize(function () {
         navClose();
+        menuClose();
+        // scrollCheck($("#first-a"), $("#first-container"));
+        // scrollCheck($("#third-a"), $("#third-container"));
+        // scrollCheckOdd($("#second-a"), $("#second-container"));
     });
 
     $("#navbar-overlay").click(function () {
@@ -317,6 +384,7 @@ $(document).ready(function () {
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
                 navClose();
+                menuClose();
             });
         } // End if
     });
