@@ -326,9 +326,6 @@ $(document).ready(function () {
     $(window).resize(function () {
         navClose();
         menuClose();
-        // scrollCheck($("#first-a"), $("#first-container"));
-        // scrollCheck($("#third-a"), $("#third-container"));
-        // scrollCheckOdd($("#second-a"), $("#second-container"));
     });
 
     $("#navbar-overlay").click(function () {
@@ -346,22 +343,30 @@ $(document).ready(function () {
 
     $(".my-card-holder").click(function () {
 
-        $("#third-a").addClass("divider-half");
-        $(".my-card-holder").each(function () {
-            $(this).addClass("card-disappear");
+        $("#third-a").animate({
+            "width": "20vw",
+        }, 1000);
+        $("#third-a h1").animate({
+            "opacity": "0",
+        }, 300);
+        $('html, body').animate({
+            scrollTop: $("#third-b").offset().top - parseInt($("#main-nav").css("height"))
+        }, 700, function () {
+            $(".my-card-holder").each(function () {
+                $(this).css({
+                    "transform": "scale(0)",
+                    "transition": "700ms 400ms"
+                })
+            });
         });
 
         $("#third-b").css({
-            "width": "80vw",
             "margin-left": "20vw",
             "transition": "1s",
         });
         $("#events-first").css({
             "display": "block"
         });
-        $('html, body').animate({
-            scrollTop: $("#third-b").offset().top - parseInt($("#main-nav").css("height"))
-        }, 500);
     });
 
     // Add smooth scrolling to all links
@@ -386,6 +391,6 @@ $(document).ready(function () {
                 navClose();
                 menuClose();
             });
-        } // End if
+        }
     });
 });

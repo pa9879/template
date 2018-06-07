@@ -8814,12 +8814,6 @@ body {
 .divider-small {
   display: none; }
 
-.divider-half {
-  transition: width 1s;
-  width: 20vw !important; }
-  .divider-half h1 {
-    opacity: 0; }
-
 .touch-menu {
   display: flex;
   flex-direction: column;
