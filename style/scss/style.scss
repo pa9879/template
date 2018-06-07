@@ -28,11 +28,26 @@ body {
 }
 
 @keyframes grow {
-    from {
+    0% {
         transform: scale(0)
     }
-    to {
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
         transform: scale(1);
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(0);
     }
 }
 
@@ -260,11 +275,10 @@ body {
 }
 
 .my-card-holder {
-    cursor: pointer;
     perspective: 1000px;
     position: relative;
     padding: 0;
-    margin-top: 50px;
+    margin-top: 70px;
     max-width: 500px;
 }
 
@@ -276,6 +290,11 @@ body {
     transform: rotateY(-180deg);
     top: 0;
     height: 100%;
+    width: 100%;
+}
+
+.card-disappear {
+    animation: shrink 1s 300ms forwards;
 }
 
 .my-card-back .card {
@@ -289,14 +308,16 @@ body {
     backface-visibility: hidden;
 }
 
-.my-card-holder:hover .my-card-front {
+.my-card-front-rotated {
     transform-style: preserve-3d;
     transform: rotateY(180deg);
+    transition: 500ms;
 }
 
-.my-card-holder:hover .my-card-back {
+.my-card-back-rotated {
     transform-style: preserve-3d;
     transform: rotateY(0deg);
+    transition: 500ms;
 }
 
 @media all and (min-width: $fullhd) {
@@ -312,13 +333,11 @@ body {
     }
 }
 
-#events-first {
+.events {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
     display: none;
-    animation: fadeIn 400ms 2s forwards;
     height: 100%;
     width: 100%;
 }

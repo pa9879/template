@@ -161,7 +161,7 @@ $(document).ready(function () {
 
     function cardOpen() {
         $('html, body').animate({
-            scrollTop: $("#third-b").offset().top - parseInt($("#main-nav").css("height"))
+            scrollTop: $("#third-b").position().top - parseInt($("#main-nav").css("height"))
         }, 700)
         // $("#third-a").animate({
         //     "width": "20vw",
@@ -271,7 +271,7 @@ $(document).ready(function () {
         if (st > lastScrollTop) {
             // Making the scrollspy for upscroll
             $("section").each(function () {
-                var check = $(this).position().top;
+                var check = $(this).position().top + 100;
                 var top = $(window).scrollTop();
                 var bottom = top + $(window).height();
                 if (check > top && check < bottom) {
@@ -285,7 +285,7 @@ $(document).ready(function () {
         } else {
             // Making the scrollspy for downscroll
             $("section").each(function () {
-                var check = $(this).position().top + parseInt($(this).css("height"));
+                var check = $(this).position().top + parseInt($(this).css("height")) - 100;
                 var top = $(window).scrollTop();
                 var bottom = top + $(window).height();
                 if (check > top && check < bottom) {
@@ -351,10 +351,66 @@ $(document).ready(function () {
             navClose();
         }
     });
-    $(".my-card-holder").click(function () {
-        cardOpen();
+    // Rotating cards
+    $(".rotate-button").click(function () {
+        var card = $(this).parents(".my-card-holder");
+        card.children(".my-card-front").toggleClass("my-card-front-rotated");
+        card.children(".my-card-back").toggleClass("my-card-back-rotated");
+    })
+    //Bringing out the events
+    $(".info-button").click(function () {
+        var card = $(this).parents(".my-card-holder");
+        var cardParent = $(this).parents(".my-content");
+        $("html, body").animate({
+            scrollTop: cardParent.offset().top - parseInt($("#main-nav .navbar-brand").css("height"))
+        }, 700, function () {
+            $(".my-card-holder").each(function () {
+                $(this).addClass("card-disappear")
+            });
+            $("#third-a h1").animate({
+                "opacity": "0",
+            }, 300)
+            setTimeout(function () {
+                $("#third-a").animate({
+                    "width": "20vw"
+                }, 200);
+                $("#third-b").css({
+                    "margin-left": "20vw"
+                });
+                $(".my-card-holder").each(function () {
+                    $(this).css({
+                        "display": "none"
+                    })
+                });
+                $("." + card.attr("id")).fadeIn("slow");
+            }, 1500)
+        });
     });
 
+    $(".event-close").click(function () {
+        $(this).parent(".events").fadeOut("slow");
+        $("#third-a").animate({
+            "width": "50%"
+        }, 200);
+        $("#third-b").css({
+            "margin-left": "51%"
+        });
+        $("#third-a h1").animate({
+            "opacity": "1",
+        }, 300);
+        $(".my-card-front").each(function () {
+            $(this).removeClass("my-card-front-rotated");
+        });
+        $(".my-card-back").each(function () {
+            $(this).removeClass("my-card-back-rotated");
+        });
+        setTimeout(function () {
+            $(".my-card-holder").each(function () {
+                $(this).removeClass("card-disappear");
+                $(this).fadeIn();
+            });
+        }, 500)
+    });
     // Add smooth scrolling to all links
     $(".navbar-item, .breadcrumb a, .menu-list a").on('click', function (event) {
 
@@ -370,7 +426,7 @@ $(document).ready(function () {
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 2000, "swing", function () {
+            }, 1000, function () {
 
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
