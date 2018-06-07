@@ -2,6 +2,7 @@
 $(window).on('beforeunload', function () {
     $(window).scrollTop(0);
 });
+
 //Particle Background
 particlesJS("particles-js", {
     "particles": {
@@ -158,6 +159,22 @@ $(document).ready(function () {
         }
     }
 
+    function cardOpen() {
+        $('html, body').animate({
+            scrollTop: $("#third-b").offset().top - parseInt($("#main-nav").css("height"))
+        }, 700)
+        // $("#third-a").animate({
+        //     "width": "20vw",
+        // }, 1000);
+        // $("#third-a h1").animate({
+        //     "opacity": "0",
+        // }, 300);
+        // $("#third-b").animate({
+        //     "transform": "translateX(20vw)"
+        // }, 1000)
+
+    }
+
     function scrollCheckOdd(fixedElement, parent) {
         if (window.matchMedia('(min-width: 768px)').matches) {
 
@@ -245,12 +262,8 @@ $(document).ready(function () {
             "transition": "700ms"
         });
     }
-    $(".menu-trigger").click(function () {
-        menuOpen();
-    });
-    $("#menu-overlay").click(function () {
-        menuClose();
-    });
+    $(".menu-trigger").click(menuOpen);
+    $("#menu-overlay").click(menuClose);
     //Scrollspy
     var lastScrollTop = 0;
     $(window).scroll(function (event) {
@@ -328,9 +341,7 @@ $(document).ready(function () {
         menuClose();
     });
 
-    $("#navbar-overlay").click(function () {
-        navClose();
-    });
+    $("#navbar-overlay").click(navClose);
 
     $(".navbar-burger").click(function () {
         var navbar = $(this).parents(".navbar");
@@ -340,33 +351,8 @@ $(document).ready(function () {
             navClose();
         }
     });
-
     $(".my-card-holder").click(function () {
-
-        $("#third-a").animate({
-            "width": "20vw",
-        }, 1000);
-        $("#third-a h1").animate({
-            "opacity": "0",
-        }, 300);
-        $('html, body').animate({
-            scrollTop: $("#third-b").offset().top - parseInt($("#main-nav").css("height"))
-        }, 700, function () {
-            $(".my-card-holder").each(function () {
-                $(this).css({
-                    "transform": "scale(0)",
-                    "transition": "700ms 400ms"
-                })
-            });
-        });
-
-        $("#third-b").css({
-            "margin-left": "20vw",
-            "transition": "1s",
-        });
-        $("#events-first").css({
-            "display": "block"
-        });
+        cardOpen();
     });
 
     // Add smooth scrolling to all links

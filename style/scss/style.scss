@@ -129,6 +129,7 @@ body {
 }
 
 .divider {
+    position: relative;
     width: 50%;
     height: 100vh;
     font: {
@@ -138,10 +139,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.divider-small {
-    display: none;
 }
 
 .touch-menu {
@@ -194,30 +191,25 @@ body {
     margin-right: 51%
 }
 
-@media all and (max-width: 768px) {
-    .divider {
-        display: none;
+.divider-small {
+    height: 100vh;
+    font: {
+        family: 'Dancing Script', cursive;
+        size: 6rem;
     }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    position: relative;
+}
+
+@media all and (max-width: 768px) {
     #main-nav {
         display: none;
     }
-    .divider-small {
-        height: 100vh;
-        font: {
-            family: 'Dancing Script', cursive;
-            size: 6rem;
-        }
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        visibility: visible;
-        position: relative; //width: 100vw;
-    }
     .my-content {
-        margin: 0;
-    }
-    #third-b {
-        margin-left: 0 !important;
+        margin: 0 !important;
     }
 }
 
