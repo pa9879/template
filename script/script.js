@@ -292,13 +292,7 @@ $(document).ready(function () {
             pJSDom[0].pJS.fn.particlesEmpty();
             pJSDom[0].pJS.fn.canvasClear();
             pJSDom[0].pJS.fn.vendors.start();
-        } else if (check > limit + 50) {
-            cancelRequestAnimFrame(pJSDom[0].pJS.fn.checkAnimFrame);
-            cancelRequestAnimFrame(pJSDom[0].pJS.fn.drawAnimFrame);
-            pJSDom[0].pJS.fn.particlesEmpty();
-            pJSDom[0].pJS.fn.canvasClear();
         }
-
     })
 
     $(window).scroll(function () {
