@@ -383,6 +383,7 @@ $(document).ready(function () {
     });
 
     $(".event-close").click(function () {
+        scrollCheck($("#third-a"), $("#third-container"));
         $(this).parent(".events").fadeOut("slow");
         $("#third-a").animate({
             "width": "50%"
