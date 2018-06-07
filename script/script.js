@@ -159,22 +159,6 @@ $(document).ready(function () {
         }
     }
 
-    function cardOpen() {
-        $('html, body').animate({
-            scrollTop: $("#third-b").position().top - parseInt($("#main-nav").css("height"))
-        }, 700)
-        // $("#third-a").animate({
-        //     "width": "20vw",
-        // }, 1000);
-        // $("#third-a h1").animate({
-        //     "opacity": "0",
-        // }, 300);
-        // $("#third-b").animate({
-        //     "transform": "translateX(20vw)"
-        // }, 1000)
-
-    }
-
     function scrollCheckOdd(fixedElement, parent) {
         if (window.matchMedia('(min-width: 768px)').matches) {
 
@@ -216,7 +200,6 @@ $(document).ready(function () {
             }
         }
     }
-    // Function to open the main navbar menu
     // Function to open the main navbar menu
     function navOpen() {
         $(".navbar-end").wrap("<div class='container'></div>");
@@ -262,6 +245,7 @@ $(document).ready(function () {
             "transition": "700ms"
         });
     }
+
     $(".menu-trigger").click(menuOpen);
     $("#menu-overlay").click(menuClose);
     //Scrollspy
@@ -299,6 +283,18 @@ $(document).ready(function () {
         }
         lastScrollTop = st;
     });
+    $(window).scroll(function () {
+        var limit = $("#section-1").position().top + parseInt($("#section-1").css("height")) + 60;
+        var check = $(window).scrollTop();
+        if (check > limit - 50 && check < limit + 50) {
+            cancelRequestAnimFrame(pJSDom[0].pJS.fn.checkAnimFrame);
+            cancelRequestAnimFrame(pJSDom[0].pJS.fn.drawAnimFrame);
+            pJSDom[0].pJS.fn.particlesEmpty();
+            pJSDom[0].pJS.fn.canvasClear();
+            pJSDom[0].pJS.fn.vendors.start();
+        }
+
+    })
 
     $(window).scroll(function () {
         scrollCheck($("#first-a"), $("#first-container"));
