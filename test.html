@@ -50,74 +50,8 @@
 </head>
 
 <body>
-    <div class="my-card-holder">
-        <div class="my-card-front box is-radiusless is-paddingless">
-            <div class="level is-marginless has-padding-15 is-mobile">
-                <div class="level-left">
-                    <div class="level-item is-uppercase">
-                        <strong>Hello World</strong>
-                    </div>
-                </div>
-                <div class="level-right">
-                    <div class="level-item">
-                        <img src="content/icon.ico" alt="icon" height="50" width="50">
-                    </div>
-                </div>
-            </div>
-            <div class="level is-marginless">
-                <div class="level-item" style="max-width: 100%">
-                    <div class="image">
-                        <img src="content/pexels-photo-800244.jpeg" alt="pexels">
-                    </div>
-                </div>
-            </div>
-            <div class="has-margin-10 has-text-centered">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae massa ac arcu eleifend consectetur.
-                Cras ut est non mauris congue tristique a sit amet nisl. Nunc cursus at tellus mattis pharetra. Vivamus convallis,
-            </div>
-            <div class="level has-padding-10">
-                <div class=" level-item rotate-button button is-danger is-outlined is-centered">
-                    <span class="icon">
-                        <i class="fa fa-share" aria-hidden="true"></i>
-                    </span>
-                    &nbsp;Rotate
-                </div>
-            </div>
-        </div>
-        <div class="my-card-back box is-radiusless is-paddingless">
-            <div class="level is-marginless has-padding-15 is-mobile">
-                <div class="level-left">
-                    <div class="level-item is-uppercase">
-                        <strong>Hello World</strong>
-                    </div>
-                </div>
-                <div class="level-right">
-                    <div class="level-item">
-                        <img src="content/icon.ico" alt="icon" height="50" width="50">
-                    </div>
-                </div>
-            </div>
-            <div class="level is-marginless">
-                <div class="level-item" style="max-width: 100%">
-                    <div class="image">
-                        <img src="content/iste_logo_start_tp.png" alt="pexels">
-                    </div>
-                </div>
-            </div>
-            <div class="has-margin-10 has-text-centered">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis elementum mi. Proin vitae massa ac arcu eleifend consectetur.
-                Cras ut est non mauris congue tristique a sit amet nisl.
-            </div>
-            <div class="level has-padding-10">
-                <div class=" level-item rotate-button button is-danger is-outlined is-centered">
-                    <span class="icon">
-                        <i class="fa fa-share" aria-hidden="true"></i>
-                    </span>
-                    &nbsp;Rotate
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="section has-background-danger is-hidden-mobile"></div>
+    <div class="section has-background-primary is-hidden-tablet"></div>
     <script>
         $(".my-card-holder").on("click", ".rotate-button", function () {
             var card = $(this).parents(".my-card-holder");
