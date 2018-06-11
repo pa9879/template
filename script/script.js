@@ -312,7 +312,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var limit = $("#section-1").position().top + parseInt($("#section-1").css("height")) + 60;
         var check = $(window).scrollTop();
-        if (check > limit - 50 && check < limit + 50) {
+        if (check > limit - 50 && check < limit + 50 && window.matchMedia('(min-width: 769px)').matches) {
             cancelRequestAnimFrame(pJSDom[0].pJS.fn.checkAnimFrame);
             cancelRequestAnimFrame(pJSDom[0].pJS.fn.drawAnimFrame);
             pJSDom[0].pJS.fn.particlesEmpty();
