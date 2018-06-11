@@ -116,10 +116,36 @@ particlesJS("particles-js", {
 });
 //jQuery for all the other things
 $(document).ready(function () {
+    scrollCheck($("#first-a"), $("#section-2"));
+    scrollCheck($("#third-a"), $("#section-4"));
+    scrollCheckOdd($("#second-a"), $("#section-3"));
+
+    var check = -1;
+
+    function particleCheck() {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            if (check != 0) {
+                cancelRequestAnimFrame(pJSDom[0].pJS.fn.checkAnimFrame);
+                cancelRequestAnimFrame(pJSDom[0].pJS.fn.drawAnimFrame);
+                pJSDom[0].pJS.fn.particlesEmpty();
+                pJSDom[0].pJS.fn.canvasClear();
+                check = 0;
+            }
+        } else if (check === 0) {
+            cancelRequestAnimFrame(pJSDom[0].pJS.fn.checkAnimFrame);
+            cancelRequestAnimFrame(pJSDom[0].pJS.fn.drawAnimFrame);
+            pJSDom[0].pJS.fn.particlesEmpty();
+            pJSDom[0].pJS.fn.canvasClear();
+            pJSDom[0].pJS.fn.vendors.start();
+            check = 1;
+        }
+    }
+
+    particleCheck();
     //Sticky dividers
     function scrollCheck(fixedElement, parent) {
-        if (window.matchMedia('(min-width: 768px)').matches) {
 
+        if (window.matchMedia('(min-width: 769px)').matches) {
             var correction = parseInt($("#main-nav .navbar-brand").css("height"));
             var topLimit = parent.position().top - correction;
             var bottomLimit = topLimit + parseInt(parent.css("height")) - parseInt(fixedElement.css("height"));
@@ -160,8 +186,7 @@ $(document).ready(function () {
     }
 
     function scrollCheckOdd(fixedElement, parent) {
-        if (window.matchMedia('(min-width: 768px)').matches) {
-
+        if (window.matchMedia('(min-width: 769px)').matches) {
             var correction = parseInt($("#main-nav .navbar-brand").css("height"));
             var topLimit = parent.position().top - correction;
             var bottomLimit = topLimit + parseInt(parent.css("height")) - parseInt(fixedElement.css("height"));
@@ -217,9 +242,9 @@ $(document).ready(function () {
             $("#main-nav .navbar-menu").toggleClass("is-active", false);
             $("#main-nav .navbar-burger").toggleClass("is-active", false);
         }, 400);
-        scrollCheck($("#first-a"), $("#first-container"));
-        scrollCheck($("#third-a"), $("#third-container"));
-        scrollCheckOdd($("#second-a"), $("#second-container"));
+        scrollCheck($("#first-a"), $("#section-2"));
+        scrollCheck($("#third-a"), $("#section-4"));
+        scrollCheckOdd($("#second-a"), $("#section-3"));
     }
     //Opening the mobile menu
     function menuOpen() {
@@ -253,9 +278,9 @@ $(document).ready(function () {
     $(window).scroll(function (event) {
         var st = $(this).scrollTop();
         if (st > lastScrollTop) {
-            // Making the scrollspy for upscroll
+            // Making the scrollspy for downscroll
             $("section").each(function () {
-                var check = $(this).position().top + 100;
+                var check = $(this).position().top;
                 var top = $(window).scrollTop();
                 var bottom = top + $(window).height();
                 if (check > top && check < bottom) {
@@ -267,9 +292,9 @@ $(document).ready(function () {
                 }
             });
         } else {
-            // Making the scrollspy for downscroll
+            // Making the scrollspy for upscroll
             $("section").each(function () {
-                var check = $(this).position().top + parseInt($(this).css("height")) - 100;
+                var check = $(this).position().top + parseInt($(this).css("height"));
                 var top = $(window).scrollTop();
                 var bottom = top + $(window).height();
                 if (check > top && check < bottom) {
@@ -283,6 +308,7 @@ $(document).ready(function () {
         }
         lastScrollTop = st;
     });
+
     $(window).scroll(function () {
         var limit = $("#section-1").position().top + parseInt($("#section-1").css("height")) + 60;
         var check = $(window).scrollTop();
@@ -296,9 +322,9 @@ $(document).ready(function () {
     })
 
     $(window).scroll(function () {
-        scrollCheck($("#first-a"), $("#first-container"));
-        scrollCheck($("#third-a"), $("#third-container"));
-        scrollCheckOdd($("#second-a"), $("#second-container"));
+        scrollCheck($("#first-a"), $("#section-2"));
+        scrollCheck($("#third-a"), $("#section-4"));
+        scrollCheckOdd($("#second-a"), $("#section-3"));
         // Making the navbar come and go.
         var heroLimit = $("#hero-top").position().top + parseInt($("#hero-top").css("height"));
         heroLimit -= parseInt($("#main-nav").css("height")) + 50;
@@ -334,6 +360,7 @@ $(document).ready(function () {
     $(window).resize(function () {
         navClose();
         menuClose();
+        particleCheck();
     });
 
     $("#navbar-overlay").click(navClose);
@@ -383,7 +410,7 @@ $(document).ready(function () {
     });
 
     $(".event-close").click(function () {
-        scrollCheck($("#third-a"), $("#third-container"));
+        scrollCheck($("#third-a"), $("#section-4"));
         $(this).parent(".events").fadeOut("slow");
         $("#third-a").animate({
             "width": "50%"

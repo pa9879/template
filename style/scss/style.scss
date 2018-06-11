@@ -11,20 +11,10 @@ body {
     overflow-x: hidden;
 }
 
-#navbar-overlay {
-    cursor: pointer;
-    display: none;
-    height: 100vh;
-    width: 100vw;
-    opacity: 0.3;
-    position: fixed;
-    top: 0;
-    background-color: #000;
-    z-index: 1400;
-}
-
-#main-nav {
-    z-index: 1500 !important;
+section {
+    position: relative;
+    padding: 0;
+    margin: 0;
 }
 
 @keyframes grow {
@@ -69,96 +59,45 @@ body {
     }
 }
 
-.hero {
-    .breadcrumb {
-        a:hover {
-            opacity: 0.5;
-        }
-    }
-}
-
-.is-border-box {
-    box-sizing: border-box;
+#navbar-overlay {
+    cursor: pointer;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.3;
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    z-index: 1400;
 }
 
 #main-nav {
+    z-index: 1500;
+    visibility: hidden;
+    opacity: 0;
     .navbar-menu .navbar-item:hover,
         {
-        color: black;
-        background: #fff;
         transition: 500ms;
+    }
+    .navbar-brand .navbar-item:hover {
+        color: #fff;
     }
     .container {
         display: none;
     }
 }
 
-@for $i from 1 to 5 {
-    .has-box-shadow-#{$i*2} {
-        box-shadow: 0 $i*2px 10px 0 #000;
-    }
-}
-
-#main-nav {
+.menu-trigger {
+    position: fixed;
     visibility: hidden;
     opacity: 0;
-}
-
-.hero-heavy {
-    font-size: 7em;
-    font-family: 'Dancing Script', cursive;
-}
-
-#hero-top {
-    background: transparent !important;
-}
-
-#particles-js {
-    position: absolute;
-    opacity: 1;
-    background: linear-gradient(141deg, #1f191a 0%, #363636 71%, #46403f 100%);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    min-height: 100vh;
-    height: 100%;
-    width: 100vw;
-}
-
-.path {
-    stroke-dasharray: 1000 5000;
-    stroke-dashoffset: 1000; // animation: dash 5s linear forwards;
-}
-
-@keyframes dash {
-    from {
-        stroke-dashoffset: 1000;
-    }
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-.content-parent {
-    position: relative;
-}
-
-.divider {
-    position: relative;
-    width: 50%;
-    height: 100vh;
-    font: {
-        family: 'Dancing Script', cursive;
-        size: 6rem;
-    }
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 20px;
+    left: 20px;
+    z-index: 1250;
 }
 
 .touch-menu {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     visibility: hidden;
@@ -185,6 +124,44 @@ body {
     }
 }
 
+.hero {
+    .breadcrumb {
+        a:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.hero-heavy {
+    font-size: 7em;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
+#hero-top {
+    background: transparent;
+}
+
+#particles-js {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+}
+
+.divider {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .my-content {
     display: flex;
     position: relative;
@@ -208,10 +185,6 @@ body {
 
 .divider-small {
     height: 100vh;
-    font: {
-        family: 'Dancing Script', cursive;
-        size: 6rem;
-    }
     display: flex;
     align-items: center;
     justify-content: center;
@@ -219,7 +192,7 @@ body {
     position: relative;
 }
 
-@media all and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     #main-nav {
         display: none;
     }
@@ -262,15 +235,6 @@ body {
     position: fixed;
     top: $navbar-height;
     right: 0;
-}
-
-.menu-trigger {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    top: 20px;
-    left: 20px;
-    z-index: 1250;
 }
 
 .my-card-holder {
@@ -319,7 +283,7 @@ body {
     transition: 500ms;
 }
 
-@media all and (min-width: $fullhd) {
+@media only screen and (min-width: $fullhd) {
     * {
         font-size: 1.1em;
     }
@@ -328,7 +292,7 @@ body {
         margin-top: 100px;
     }
     .card {
-        box-shadow: 0 2px 10px 0 #000;
+        box-shadow: 0 2px 3px rgba(10, 10, 10, 0.4), 0 0 0 1px rgba(10, 10, 10, 0.4)
     }
 }
 
@@ -339,9 +303,4 @@ body {
     display: none;
     height: 100%;
     width: 100%;
-}
-
-.delete-for-small {
-    position: absolute;
-    top: 10px;
 }

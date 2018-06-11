@@ -2,8 +2,9 @@
 @import "../../bulma/sass/utilities/initial-variables.sass";
 @import "../../bulma/sass/utilities/derived-variables.sass";
 $navbar-height: 4rem;
+$navbar-background-color: $dark;
 $navbar-item-color: $white;
 $navbar-item-hover-color: $black;
-$navbar-background-color: $dark;
-$navbar-item-active-color: $black !important;
-$navbar-item-active-background-color: $white !important;
+$navbar-item-hover-background-color: $white-ter;
+$navbar-item-active-color: $black;
+$navbar-item-active-background-color: $white-ter;
