@@ -327,12 +327,12 @@ $(document).ready(function () {
         scrollCheckOdd($("#second-a"), $("#section-3"));
         // Making the navbar come and go.
         var heroLimit = $("#hero-top").position().top + parseInt($("#hero-top").css("height"));
-        heroLimit -= parseInt($("#main-nav").css("height")) + 50;
+        heroLimit -= parseInt($("#main-nav").css("height")) + 70;
         if ($(window).scrollTop() > heroLimit) {
             $("#main-nav").css({
                 "visibility": "visible",
                 "opacity": "1",
-                "transition": "700ms"
+                "transition": "300ms"
             });
             $(".menu-trigger").css({
                 "visibility": "visible",
@@ -361,6 +361,10 @@ $(document).ready(function () {
         navClose();
         menuClose();
         particleCheck();
+        scrollCheck($("#first-a"), $("#section-2"));
+        scrollCheck($("#third-a"), $("#section-4"));
+        scrollCheckOdd($("#second-a"), $("#section-3"));
+
     });
 
     $("#navbar-overlay").click(navClose);
