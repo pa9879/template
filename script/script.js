@@ -275,7 +275,9 @@ $(document).ready(function () {
     $("#menu-overlay").click(menuClose);
     //Scrollspy
     var lastScrollTop = 0;
-    $(window).scroll(function (event) {
+
+    function scrollSpy() {
+
         var st = $(this).scrollTop();
         if (st > lastScrollTop) {
             // Making the scrollspy for downscroll
@@ -295,8 +297,9 @@ $(document).ready(function () {
             // Making the scrollspy for upscroll
             $("section").each(function () {
                 var check = $(this).position().top + parseInt($(this).css("height"));
-                var top = $(window).scrollTop() + 50;
+                var top = $(window).scrollTop() + parseInt($("#main-nav").css("height"));
                 var bottom = top + $(window).height();
+                top += 50;
                 if (check > top && check < bottom) {
                     $(".navbar-item, .menu-list a").each(function () {
                         $(this).removeClass("is-active");
@@ -307,6 +310,10 @@ $(document).ready(function () {
             });
         }
         lastScrollTop = st;
+    }
+
+    $(window).scroll(function (event) {
+        scrollSpy();
     });
 
     $(window).scroll(function () {
@@ -365,6 +372,7 @@ $(document).ready(function () {
     $(window).resize(function () {
         navClose();
         menuClose();
+        scrollSpy();
         particleCheck();
         scrollCheck($("#first-a"), $("#section-2"));
         scrollCheck($("#third-a"), $("#section-4"));
@@ -394,12 +402,6 @@ $(document).ready(function () {
         $("html, body").animate({
             scrollTop: cardParent.offset().top - parseInt($("#main-nav .navbar-brand").css("height"))
         }, 700, function () {
-            $(".navbar-item, .menu-list a").each(function () {
-                $(this).removeClass("is-active");
-            })
-            var name = ".navbar-menu a[href='#section-4'] , .menu-list a[href='#section-4']";
-            $(name).addClass("is-active");
-
             $(".my-card-holder").each(function () {
                 $(this).addClass("card-disappear")
             });
