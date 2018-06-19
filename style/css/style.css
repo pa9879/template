@@ -4356,7 +4356,7 @@ a.navbar-item,
   a.navbar-item:hover, a.navbar-item.is-active,
   .navbar-link:hover,
   .navbar-link.is-active {
-    background-color: whitesmoke;
+    background-color: #dbdbdb;
     color: #0a0a0a; }
 
 .navbar-item {
@@ -4602,10 +4602,10 @@ a.navbar-item,
     color: #0a0a0a; }
   a.navbar-item.is-active:not(:hover),
   .navbar-link.is-active:not(:hover) {
-    background-color: whitesmoke; }
+    background-color: #dbdbdb; }
 
   .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: whitesmoke; } }
+    background-color: #dbdbdb; } }
 .pagination {
   font-size: 1rem;
   margin: -0.25rem; }
@@ -8982,7 +8982,7 @@ section {
   opacity: 0.5; }
 
 .hero-heavy {
-  font-size: 7em;
+  font-size: 5em;
   color: white;
   font-family: 'Dancing Script', cursive; }
 
@@ -9073,8 +9073,7 @@ section {
 .my-card-holder {
   perspective: 1000px;
   position: relative;
-  padding: 0;
-  margin-top: 70px;
+  margin-bottom: 50px;
   max-width: 500px; }
 
 .my-card-back {
