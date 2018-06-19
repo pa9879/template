@@ -282,7 +282,7 @@ $(document).ready(function () {
             $("section").each(function () {
                 var check = $(this).position().top;
                 var top = $(window).scrollTop();
-                var bottom = top + $(window).height();
+                var bottom = top + $(window).height() - 50;
                 if (check > top && check < bottom) {
                     $(".navbar-item, .menu-list a").each(function () {
                         $(this).removeClass("is-active");
@@ -295,7 +295,7 @@ $(document).ready(function () {
             // Making the scrollspy for upscroll
             $("section").each(function () {
                 var check = $(this).position().top + parseInt($(this).css("height"));
-                var top = $(window).scrollTop();
+                var top = $(window).scrollTop() + 50;
                 var bottom = top + $(window).height();
                 if (check > top && check < bottom) {
                     $(".navbar-item, .menu-list a").each(function () {
@@ -334,24 +334,29 @@ $(document).ready(function () {
                 "opacity": "1",
                 "transition": "300ms"
             });
+
+        } else {
+            if ($("#main-nav .navbar-menu").hasClass("is-active")) {
+                navClose();
+            }
+            menuClose();
+            $("#main-nav").css({
+                "visibility": "hidden",
+                "opacity": "0",
+                "transition": "700ms"
+            });
+        }
+        var footerCheck = $("#section-5").position().top - 50;
+        if ($(window).scrollTop() > heroLimit && $(window).scrollTop() < footerCheck) {
             $(".menu-trigger").css({
                 "visibility": "visible",
                 "opacity": "1",
                 "transition": "700ms"
             });
-        } else {
-            if ($("#main-nav .navbar-menu").hasClass("is-active")) {
-                navClose();
-            }
+        } else if ($(window).scrollTop() > footerCheck || $(window).scrollTop() < heroLimit) {
             $(".menu-trigger").css({
                 "opacity": "0",
                 "visibility": "hidden",
-                "transition": "700ms"
-            });
-            menuClose();
-            $("#main-nav").css({
-                "visibility": "hidden",
-                "opacity": "0",
                 "transition": "700ms"
             });
         }
@@ -364,7 +369,6 @@ $(document).ready(function () {
         scrollCheck($("#first-a"), $("#section-2"));
         scrollCheck($("#third-a"), $("#section-4"));
         scrollCheckOdd($("#second-a"), $("#section-3"));
-
     });
 
     $("#navbar-overlay").click(navClose);
@@ -390,6 +394,12 @@ $(document).ready(function () {
         $("html, body").animate({
             scrollTop: cardParent.offset().top - parseInt($("#main-nav .navbar-brand").css("height"))
         }, 700, function () {
+            $(".navbar-item, .menu-list a").each(function () {
+                $(this).removeClass("is-active");
+            })
+            var name = ".navbar-menu a[href='#section-4'] , .menu-list a[href='#section-4']";
+            $(name).addClass("is-active");
+
             $(".my-card-holder").each(function () {
                 $(this).addClass("card-disappear")
             });
