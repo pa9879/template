@@ -3,6 +3,12 @@ $(window).on('beforeunload', function () {
     $(window).scrollTop(0);
 });
 
+$(document).ready(function () {
+    setTimeout(function () {
+        $("#preloader-overlay").slideUp();
+    }, 1300)
+})
+
 //Particle Background
 particlesJS("particles-js", {
     "particles": {
@@ -451,7 +457,7 @@ $(document).ready(function () {
         }, 500)
     });
     // Add smooth scrolling to all links
-    $(".navbar-item, .breadcrumb a, .menu-list a").on('click', function (event) {
+    $(".navbar-item, .breadcrumb a, .menu-list a, #top-button").on('click', function (event) {
 
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
