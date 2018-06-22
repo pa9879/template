@@ -6,7 +6,7 @@ $(window).on('beforeunload', function () {
 $(document).ready(function () {
     setTimeout(function () {
         $("#preloader-overlay").slideUp();
-    }, 1200)
+    }, 1200);
 })
 
 //Particle Background
@@ -122,9 +122,10 @@ particlesJS("particles-js", {
 });
 //jQuery for all the other things
 $(document).ready(function () {
-    scrollCheck($("#first-a"), $("#section-2"));
-    scrollCheck($("#third-a"), $("#section-4"));
-    scrollCheckOdd($("#second-a"), $("#section-3"));
+
+    $("html, body").animate({
+        scrollTop: 0
+    });
 
     var check = -1;
 
@@ -318,6 +319,22 @@ $(document).ready(function () {
         lastScrollTop = st;
     }
 
+    function sectionCheck() {
+        var top = $(window).scrollTop() + parseInt($("#main-nav").css("height")) + 50;
+        var bottom = top + $(window).height() - 50;
+        $("section").each(function () {
+            var sectionTop = $(this).position().top;
+            var sectionBottom = sectionTop + parseInt($(this).css("height"));
+            if (sectionTop < top && sectionBottom > bottom) {
+                $(".navbar-item, .menu-list a").each(function () {
+                    $(this).removeClass("is-active");
+                });
+                var name = ".navbar-menu a[href='#" + $(this).attr("id") + "'] , .menu-list a[href='#" + $(this).attr("id") + "']";
+                $(name).addClass("is-active");
+            }
+        })
+    }
+
     $(window).scroll(function (event) {
         scrollSpy();
     });
@@ -378,7 +395,7 @@ $(document).ready(function () {
     $(window).resize(function () {
         navClose();
         menuClose();
-        scrollSpy();
+        sectionCheck();
         particleCheck();
         scrollCheck($("#first-a"), $("#section-2"));
         scrollCheck($("#third-a"), $("#section-4"));
