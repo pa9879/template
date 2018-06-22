@@ -6,7 +6,7 @@ $(window).on('beforeunload', function () {
 $(document).ready(function () {
     setTimeout(function () {
         $("#preloader-overlay").slideUp();
-    }, 1300)
+    }, 1200)
 })
 
 //Particle Background
