@@ -8892,7 +8892,7 @@ label.panel-block {
   color: white; }
 
 #preloader-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
@@ -8905,8 +8905,8 @@ label.panel-block {
   background-color: #4a4a4a; }
 
 .sk-cube-grid {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   margin: 100px auto; }
 
 .sk-cube-grid .sk-cube {

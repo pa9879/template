@@ -6,7 +6,8 @@ $(window).on('beforeunload', function () {
 $(document).ready(function () {
     setTimeout(function () {
         $("#preloader-overlay").slideUp();
-    }, 1200);
+    }, 1000);
+
 })
 
 //Particle Background
@@ -125,7 +126,7 @@ $(document).ready(function () {
 
     $("html, body").animate({
         scrollTop: 0
-    });
+    }, 1);
 
     var check = -1;
 
@@ -320,8 +321,8 @@ $(document).ready(function () {
     }
 
     function sectionCheck() {
-        var top = $(window).scrollTop() + parseInt($("#main-nav").css("height")) + 50;
-        var bottom = top + $(window).height() - 50;
+        var top = $(window).scrollTop() + parseInt($("#main-nav").css("height"));
+        var bottom = top + $(window).height();
         $("section").each(function () {
             var sectionTop = $(this).position().top;
             var sectionBottom = sectionTop + parseInt($(this).css("height"));
