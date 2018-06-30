@@ -1,0 +1,40 @@
+@import "../bulma/sass/utilities/_all";
+@import "../bulma/sass/base/_all.sass";
+@import "../bulma/sass/utilities/functions.sass";
+@import "../bulma/sass/utilities/initial-variables.sass";
+$danger: #f7484e;
+$dark: #292929;
+@import "../bulma/sass/utilities/derived-variables.sass";
+$navbar-height: 4rem;
+$navbar-background-color: $dark;
+$navbar-item-color: $white;
+$navbar-item-hover-color: $black;
+$navbar-item-hover-background-color: $grey-lighter;
+$navbar-item-active-color: $black;
+$navbar-item-active-background-color: $grey-lighter;
+@import "../bulma/sass/components/navbar.sass";
+#main-nav {
+    z-index: 1500;
+    .navbar-menu .navbar-item:hover,
+        {
+        transition: 500ms;
+    }
+    .navbar-brand .navbar-item:hover {
+        color: #fff;
+    }
+    .container {
+        display: none;
+    }
+}
+
+#navbar-overlay {
+    cursor: pointer;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.3;
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    z-index: 1400;
+}
