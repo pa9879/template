@@ -18,7 +18,159 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <title>Document</title>
 </head>
-
+<style type="text/css">
+    body{
+        margin: 0;
+        padding: 0;
+        height: 2000px;
+    }
+    .containr{
+        padding: auto;
+        width: 80%;
+        height: auto;
+        margin:10px auto;
+        text-align: center;
+    }
+    .box{
+        display: block;
+        width: 20%;
+        height: 300px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        margin-left: 4%;
+        position: relative;
+        font-size: 22px;
+        text-align: center;
+        float:left;
+        box-shadow: 0px 0px 8px grey;
+        background-color: #eeeeee;
+    }
+    .box:hover {
+        background-color: black;
+        color: white;
+    }
+    .box:hover .circle{
+        width: 100px;
+        height: 100px;
+    }
+    .box:hover .circle img{
+        width: 100px;
+        height: 100px;
+    }
+    .circle{
+        display: block;
+        background-color: red;
+        width: 150px;
+        height: 150px;
+        margin: -50px auto;
+        border-radius: 150px;
+    }
+    .circle img{
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 150px;
+    }
+    .fb{
+        width : 60px;
+        height: 60px;
+        margin-left: 25%;
+        display: none;
+    }
+    .linked
+    {
+        width : 60px;
+        height: 60px;
+        position: relative;
+        margin-top: -60px;
+        margin-left: 50%;
+        display: none;
+    }
+    .fb img{
+        width :100%;
+        height:100%;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+    .box:hover .fb{
+        display: block;
+    }
+    .box:hover .linked{
+        display: block;
+    }
+    .fb img:hover{
+        filter: invert(100%);
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    .alumini{
+        display: box;
+        height: 48px;
+        width: 170px;
+        border: 5px solid black;
+        margin: auto;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 24px;
+        margin-top: 100px;
+        font-family: Ailerons;
+    }
+    .name{
+        display: block-inline;
+        margin: 55px 0px auto;
+        font-family: Bebas Neue;
+    }
+    .cont{
+        display: inline-block;
+        margin: auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .headw{
+        width: 100%;
+        height: 50px;
+        display: box;
+        margin-top: -50px;
+        opacity: 0;
+    }
+    .button
+    {
+        width: 40px;
+        height: 40px;
+    }
+    @media screen and (max-width: 2000px){
+        .containr{
+            height: 1850px;
+        }
+    }
+    @media screen and (max-width: 1300px){
+        .box{
+            width: 26%;
+            margin-left: 5%;
+        }
+        .containr{
+            height: 2600px;
+        }
+    }
+    @media screen and (max-width: 1000px){
+        .box{
+            width: 35%;
+            margin-left: 10%;
+        }
+        .containr{
+            height: 4600px;
+        }
+    }
+    @media screen and (max-width: 640px){
+        .box{
+            width: 80%;
+            margin-left: 10%;
+        }
+        .containr{
+            height: 9300px;
+        }
+    }
+</style>
 <body>
     <div class="icon menu-trigger is-hidden-tablet button is-large is-danger">
         <i class="fas fa-bars"></i>
@@ -32,46 +184,46 @@
                 </p>
                 <ul class="menu-list">
                     <li>
-                        <a href="#" class="has-text-semiboldmenu-link">
+                        <a href="../index.html" class="has-text-semiboldmenu-link">
                             <span class="icon">
                                 <i class="fas fa-home"></i>
                             </span>&nbsp;&nbsp;&nbsp;Home</a>
                     </li>
                     <li>
-                        <a href="#section-2" class="has-text-semibold menu-link">
+                        <a href="../index.html#section-2" class="has-text-semibold menu-link">
                             <span class="icon">
                                 <i class="fas fa-info-circle"></i>
                             </span>&nbsp;&nbsp;&nbsp;About ISTE</a>
                     </li>
                     <li>
-                        <a href="#section-3" class="has-text-semibold menu-link">
+                        <a href="../index.html#section-3" class="has-text-semibold menu-link">
                             <span class="icon">
                                 <i class="fas fa-building"></i>
                             </span>&nbsp;&nbsp;&nbsp;ISTE MANIT</a>
                     </li>
                     <li>
-                        <a href="#section-4" class="has-text-semibold menu-link">
+                        <a href="../index.html#section-4" class="has-text-semibold menu-link">
                             <span class="icon">
                                 <i class="fas fa-calendar"></i>
                             </span>&nbsp;&nbsp;&nbsp;Events</a>
                     </li>
                     <li>
-                        <a href="#section-5" class="has-text-semibold menu-link">
+                        <a href="../index.html#section-5" class="has-text-semibold menu-link">
                             <span class="icon">
                                 <i class="fas fa-address-book"></i>
                             </span>&nbsp;&nbsp;&nbsp;Contact Details</a>
                     </li>
                     <li>
-                        <a href="#" class="has-text-semibold is-active menu-link">
+                        <a href="#" class="has-text-semibold menu-link">
                             <span class="icon">
                                 <i class="fas fa-file-image"></i>
                             </span>&nbsp;&nbsp;&nbsp;Gallery</a>
                     </li>
                     <li>
-                        <a href="#" class="has-text-semibold menu-link">
+                        <a href="test.html" class="has-text-semibold is-active menu-link">
                             <span class="icon">
                                 <i class="fas fa-users"></i>
-                            </span>&nbsp;&nbsp;&nbsp;Team</a>
+                            </span>&nbsp;&nbsp;&nbsp;Alumni</a>
                     </li>
                 </ul>
             </aside>
@@ -94,37 +246,620 @@
             <div class="navbar-start">
             </div>
             <div class="navbar-end">
-                <a href="#" class="navbar-item">
+                <a href="../index.html" class="navbar-item">
                     <span class="icon is-hidden-desktop">
                         <i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;
                     </span>Home</a>
-                <a href="#section-2" class="navbar-item">
+                <a href="../index.html#section-2" class="navbar-item">
                     <span class="icon is-hidden-desktop">
                         <i class="fas fa-info-circle"></i>&nbsp;&nbsp;&nbsp;
                     </span>About ISTE</a>
-                <a href="#section-3" class="navbar-item">
+                <a href="../index.html#section-3" class="navbar-item">
                     <span class="icon is-hidden-desktop">
                         <i class="fas fa-building"></i>&nbsp;&nbsp;&nbsp;
                     </span>ISTE MANIT</a>
-                <a href="#section-4" class="navbar-item">
+                <a href="../index.html#section-4" class="navbar-item">
                     <span class="icon is-hidden-desktop">
                         <i class="fas fa-calendar"></i>&nbsp;&nbsp;&nbsp;
                     </span>Events</a>
-                <a href="#section-5" class="navbar-item">
+                <a href="../index.html#section-5" class="navbar-item">
                     <span class="icon is-hidden-desktop">
                         <i class="fas fa-address-book"></i>&nbsp;&nbsp;&nbsp;
                     </span>Contact Details</a>
-                <a href="#" class="navbar-item is-active">
+                <a href="#" class="navbar-item">
                     <span class="icon is-hidden-desktop">
                         <i class="fas fa-file-image"></i>&nbsp;&nbsp;&nbsp;
                     </span>Gallery</a>
-                <a href="#" class="navbar-item">
+                <a href="test.html" class="navbar-item is-active">
                     <span class="icon is-hidden-desktop">
                         <i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp;
-                    </span>Team</a>
+                    </span>Alumni</a>
             </div>
         </div>
     </nav>
+    <div class="alumini">ALUMNI</div>
+    <div class="containr" id="containr">
+    <div class="box" id="header1">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header2">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header20">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header21">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header3">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header4">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+       <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header5">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header6">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header22">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+       <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header7">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header23">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header8">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header9">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header10">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header11">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header24">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+        <a href="#">
+            <img src="fb.jpg">
+        </a>
+    </div><div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header12">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header13">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header14">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header15">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header16">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header17">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+    <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header18">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="box" id="header19">
+        <div class="headw"></div>
+        <div class="circle">
+            <img src="1.jpg">
+        </div>
+        <div class="name">DANIEL NIELSEN</div>
+        <div class="cont">Works at Susgant Night Canteen.<br><br>
+            Highly professional and experienced.
+        </div>
+        <div class="fb">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+            </a>
+        </div>
+        <div class="linked">
+            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    </div>
     <div class="section is-large"></div>
     <section class="section has-background-dark is-unselectable has-text-white" id="section-5">
         <div class="my-footer columns is-multiline is-centered">

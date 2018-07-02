@@ -4977,7 +4977,7 @@ label.panel-block {
   .columns.is-mobile > .column.is-1 {
     flex: none;
     width: 8.3333333333%; }
-  .columns.is-mobile > .column.is-offset-1 {
+  .columns.is-mobile > .cfolumn.is-offset-1 {
     margin-left: 8.3333333333%; }
   .columns.is-mobile > .column.is-2 {
     flex: none;
