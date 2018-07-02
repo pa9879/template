@@ -15,9 +15,6 @@ function navClose() {
         $("#main-nav .navbar-menu").toggleClass("is-active", false);
         $("#main-nav .navbar-burger").toggleClass("is-active", false);
     }, 400);
-    scrollCheck($("#first-a"), $("#section-2"));
-    scrollCheck($("#third-a"), $("#section-4"));
-    scrollCheckOdd($("#second-a"), $("#section-3"));
 }
 
 $("#navbar-overlay").click(navClose);
@@ -30,3 +27,36 @@ $(".navbar-burger").click(function () {
         navClose();
     }
 });
+
+//Opening the mobile menu
+function menuOpen() {
+    $(".touch-menu").css({
+        "visibility": "visible",
+        "opacity": "1",
+        "transition": "700ms"
+    });
+    $(".menu-trigger").css({
+        "transform": "scale(0)",
+        "transition": "700ms"
+    });
+}
+
+function menuClose() {
+    $(".touch-menu").css({
+        "visibility": "hidden",
+        "opacity": "0",
+        "transition": "700ms"
+    });
+    $(".menu-trigger").css({
+        "transform": "scale(1)",
+        "transition": "700ms"
+    });
+}
+
+$(".menu-trigger").click(menuOpen);
+$("#menu-overlay").click(menuClose);
+
+$(window).resize(function () {
+    menuClose();
+    navClose();
+})
