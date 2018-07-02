@@ -16,6 +16,8 @@ $navbar-item-active-background-color: $grey-lighter;
 @import "../bulma/sass/components/menu.sass";
 @import "../bulma/sass/elements/container.sass";
 @import "../bulma/sass/elements/button.sass";
+@import "../bulma/sass/grid/columns.sass";
+@import "../bulma/sass/layout/section.sass";
 #main-nav {
     z-index: 1500;
     .navbar-menu .navbar-item:hover,
