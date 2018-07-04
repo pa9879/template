@@ -235,16 +235,16 @@ $(document).ready(function () {
     }
     // Function to open the main navbar menu
     function navOpen() {
-        $(".navbar-end").wrap("<div class='container'></div>");
-        $("#navbar-overlay").fadeIn("slow");
-        $("#main-nav .navbar-menu").toggleClass("is-active", true);
-        $("#main-nav .navbar-burger").toggleClass("is-active", true);
-        $("#main-nav .container").slideDown("fast");
+        $("#main-nav").removeClass("rounded-nav");
+        $("#main-nav").addClass("fullheight");
+        setTimeout(function () {
+            $("#main-nav .navbar-menu").toggleClass("is-active", true);
+            $("#main-nav .navbar-burger").toggleClass("is-active", true);
+        }, 500)
     }
     // Function to close the main navbar menu
     function navClose() {
         $("#main-nav .container").slideUp("fast");
-        $("#navbar-overlay").fadeOut("slow");
         setTimeout(function () {
             $(".navbar-end").unwrap(".container");
             $("#main-nav .navbar-menu").toggleClass("is-active", false);
@@ -402,8 +402,6 @@ $(document).ready(function () {
         scrollCheck($("#third-a"), $("#section-4"));
         scrollCheckOdd($("#second-a"), $("#section-3"));
     });
-
-    $("#navbar-overlay").click(navClose);
 
     $(".navbar-burger").click(function () {
         var navbar = $(this).parents(".navbar");
