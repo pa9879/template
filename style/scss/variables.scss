@@ -2,11 +2,16 @@
 @import "../../bulma/sass/utilities/initial-variables.sass";
 $danger: #f7484e;
 $dark: #292929;
+$light-blue-invert: $black;
+$darkest-blue-invert: $white;
+$second-darkest-blue-invert: $white;
+$darker-blue-invert: $white;
+$custom-colors: ("light-blue": (#d0e1f9, $light-blue-invert), "darker-blue": (#4d648d, $darker-blue-invert), "second-darkest-blue": (#283655, $second-darkest-blue-invert), "darkest-blue": (#1e1f26, $darkest-blue-invert));
 @import "../../bulma/sass/utilities/derived-variables.sass";
 $navbar-height: 4rem;
 $navbar-background-color: $dark;
 $navbar-item-color: $white;
-$navbar-item-hover-color: $black;
+$navbar-item-hover-color: $dark;
 $navbar-item-hover-background-color: $grey-lighter;
-$navbar-item-active-color: $black;
+$navbar-item-active-color: $dark;
 $navbar-item-active-background-color: $grey-lighter;
