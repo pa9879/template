@@ -2,9 +2,14 @@
 @import "../../bulma/bulma.sass";
 @import "bordersAndSpacing.scss";
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Courgette');
 *::selection {
-    background-color: $danger;
+    background-color: $dark;
     color: white;
+}
+
+strong {
+    color: inherit;
 }
 
 #preloader-overlay {
@@ -236,7 +241,7 @@ section {
 .hero-heavy {
     font-size: 5em;
     color: white;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Courgette', cursive;
 }
 
 #hero-top {
@@ -270,7 +275,7 @@ section {
     align-items: center;
     justify-content: center;
     padding: 100px 50px;
-    margin-left: 51%;
+    margin-left: 50%;
     min-height: 100vh;
 }
 
@@ -281,7 +286,7 @@ section {
     justify-content: center;
     position: relative;
     margin: 0;
-    margin-right: 51%
+    margin-right: 50%
 }
 
 .divider-small {
