@@ -165,13 +165,20 @@ section {
     }
 }
 
-.fullheight {
-    height: 80%;
-    transition: 500ms;
-}
-
 .rounded-nav {
     border-radius: 0 0 50% 50%;
+}
+
+#navbar-overlay {
+    cursor: pointer;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.3;
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    z-index: 1400;
 }
 
 #main-nav {

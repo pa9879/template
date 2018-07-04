@@ -235,25 +235,23 @@ $(document).ready(function () {
     }
     // Function to open the main navbar menu
     function navOpen() {
+        $("#navbar-overlay").fadeIn();
         $("#main-nav").removeClass("rounded-nav");
         $("#main-nav").addClass("fullheight");
         $("#main-nav .navbar-burger").toggleClass("is-active", true);
         $(".navbar-end").wrap("<div class='container'></div>");
-        setTimeout(function () {
-            $("#main-nav .navbar-menu").toggleClass("is-active", true);
-            $("#main-nav .container").fadeIn(500)
-        }, 500)
+        $("#main-nav .navbar-menu").toggleClass("is-active", true);
+        $("#main-nav .container").fadeIn(500)
     }
     // Function to close the main navbar menu
     function navClose() {
+        $("#navbar-overlay").fadeOut();
         $("#main-nav .container").slideUp(300);
         $("#main-nav .navbar-burger").toggleClass("is-active", false);
-        setTimeout(function () {
-            $(".navbar-end").unwrap(".container");
-            $("#main-nav .navbar-menu").toggleClass("is-active", false);
-            $("#main-nav").addClass("rounded-nav");
-            $("#main-nav").removeClass("fullheight");
-        }, 500);
+        $(".navbar-end").unwrap(".container");
+        $("#main-nav .navbar-menu").toggleClass("is-active", false);
+        $("#main-nav").addClass("rounded-nav");
+        $("#main-nav").removeClass("fullheight");
         scrollCheck($("#first-a"), $("#section-2"));
         scrollCheck($("#third-a"), $("#section-4"));
         scrollCheckOdd($("#second-a"), $("#section-3"));
@@ -282,7 +280,7 @@ $(document).ready(function () {
             "transition": "700ms"
         });
     }
-
+    $("#navbar-overlay").click(navClose);
     $(".menu-trigger").click(menuOpen);
     $("#menu-overlay").click(menuClose);
     //Scrollspy
