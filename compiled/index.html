@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<html lang="en">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -57,13 +58,81 @@
 	<![endif]-->
 
 	</head>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+        }
+    </style>
 	<body>
-	<div id="navbar-overlay"></div>
+	<div class="icon menu-trigger is-hidden-tablet button is-large is-danger">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="touch-menu is-hidden-tablet">
+        <div id="menu-overlay"></div>
+        <div class="container has-background-white has-border-radius-20 has-padding-10">
+            <aside class="menu">
+                <p class="menu-label has-padding-5">
+                    Navigation Menu
+                </p>
+                <ul class="menu-list">
+                    <li>
+                        <a href="../index.html" class="has-text-semiboldmenu-link">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>&nbsp;&nbsp;&nbsp;Home</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#section-2" class="has-text-semibold menu-link">
+                            <span class="icon">
+                                <i class="fas fa-info-circle"></i>
+                            </span>&nbsp;&nbsp;&nbsp;About ISTE</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#section-3" class="has-text-semibold menu-link">
+                            <span class="icon">
+                                <i class="fas fa-building"></i>
+                            </span>&nbsp;&nbsp;&nbsp;ISTE MANIT</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#section-4" class="has-text-semibold menu-link">
+                            <span class="icon">
+                                <i class="fas fa-calendar"></i>
+                            </span>&nbsp;&nbsp;&nbsp;Events</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#section-5" class="has-text-semibold menu-link">
+                            <span class="icon">
+                                <i class="fas fa-address-book"></i>
+                            </span>&nbsp;&nbsp;&nbsp;Contact Details</a>
+                    </li>
+                    <li>
+                        <a href="#" class="has-text-semibold menu-link">
+                            <span class="icon">
+                                <i class="fas fa-file-image"></i>
+                            </span>&nbsp;&nbsp;&nbsp;Gallery</a>
+                    </li>
+                    <li>
+                        <a href="test.html" class="has-text-semibold is-active menu-link">
+                            <span class="icon">
+                                <i class="fas fa-users"></i>
+                            </span>&nbsp;&nbsp;&nbsp;Alumni</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    <div id="navbar-overlay"></div>
     <nav class="navbar is-hidden-mobile is-fixed-top" id="main-nav" role="navigation" aria-label="main navigation">
         <div class="navbar-brand is-size-5">
-            <a class="navbar-item" href="#section-1">
+            <a class="navbar-item" href="#">
                 <img src="iste_logo_start_tp.png" alt="ISTE Logo">
-                <span class="is-uppercase has-text-weight-semibold" style="padding-left:10px;">ISTE MANIT</span>
+                <span class="is-uppercase has-text-weight-semibold has-padding-left-10">ISTE MANIT</span>
             </a>
             <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -312,7 +381,66 @@
 	</div>
 
 	
-
+     <div class="section is-large"></div>
+    <section class="section has-background-dark is-unselectable has-text-white" id="section-5">
+        <div class="my-footer columns is-multiline is-centered">
+            <div class="column is-3">
+                <h1 class="is-size-3 is-italic is-capitalized" style="color: white;">Reach out to us at:</h1>
+                <br>
+                <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                    <span class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </span>
+                </a>
+                <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                    <span class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </a>
+                <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+                    <span class="icon">
+                        <i class="fab fa-instagram"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="column is-3">
+                <h1 class="is-size-3 is-italic heading has-text-white is-capitalized">Write to us at:</h1>
+                <br>
+                <p class="is-italic">
+                    Maulana Azad National Institute of Technology,
+                    <br> Bhopal, Madhya Pradesh - 462003
+                    <br>India
+                </p>
+            </div>
+            <div class="column is-3">
+                <h1 class="is-size-3 is-italic heading has-text-white is-capitalized">Call us at:</h1>
+                <br>
+                <p class="is-italic">
+                    Utkarsh Bajpai : +91 8085240619
+                    <br>Atul Garg : +91 9755236855
+                </p>
+            </div>
+        </div>
+        <div class="container has-text-centered-tablet is-borderless">
+            <div>
+                <a href="#" id="top-button" class="button is-hidden-fullhd is-outlined is-inverted is-dark">
+                    <span class="icon">
+                        <i class="fas fa-angle-double-up"></i>&nbsp;&nbsp;&nbsp;
+                    </span>
+                    Go to Top</a>
+                <a href="#" id="top-button" class="button is-large is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only is-hidden-widescreen-only is-outlined is-inverted is-dark">
+                    <span class="icon">
+                        <i class="fas fa-angle-double-up"></i>&nbsp;&nbsp;&nbsp;
+                    </span>
+                    Go to Top</a>
+            </div>
+            <br>
+            <div class="has-text-grey">
+                <b class="is-capitalized">all rights reserved.&nbsp;</b>
+                <span class="is-uppercase">ISTE SC MANIT</span>
+            </div>
+        </div>
+    </section>
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
