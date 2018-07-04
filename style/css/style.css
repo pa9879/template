@@ -9853,8 +9853,8 @@ section {
   to {
     opacity: 0; } }
 .fullheight {
-  height: 100%;
-  transition: 600ms; }
+  height: 80%;
+  transition: 500ms; }
 
 .rounded-nav {
   border-radius: 0 0 50% 50%; }
