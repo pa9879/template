@@ -2,12 +2,10 @@
 This is the official ISTE MANIT website.
 ## installation
 Clone the directory. Then get the submodules by
-'''
+```
 git submodule init
-'''
-'''
 git submodule update
-'''
+```
 
 and you are good to go
 ## directories
