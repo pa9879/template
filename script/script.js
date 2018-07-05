@@ -424,7 +424,7 @@ $(document).ready(function () {
         var card = $(this).parents(".my-card-holder");
         var cardParent = $(this).parents(".my-content");
         $("html, body").animate({
-            scrollTop: cardParent.offset().top - parseInt($("#main-nav .navbar-brand").css("height"))
+            scrollTop: cardParent.offset().top - parseInt($("#main-nav").css("height"))
         }, 700, function () {
             $(".my-card-holder").each(function () {
                 $(this).addClass("card-disappear")
@@ -456,7 +456,7 @@ $(document).ready(function () {
             "width": "50%"
         }, 200);
         $("#third-b").css({
-            "margin-left": "51%"
+            "margin-left": "50%"
         });
         $("#third-a h1").animate({
             "opacity": "1",
