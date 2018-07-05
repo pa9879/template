@@ -1,10 +1,13 @@
-
 <!DOCTYPE html>
+<html lang="en">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>GALLERY</title>
@@ -13,20 +16,19 @@
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#292929" />
-    <link rel="stylesheet" href="nav.css" type="text/css">
-    <link rel="shortcut icon" href="iste_logo_start_tp.png">
-    <title>ISTE MANIT</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  
+	<meta name="theme-color" content="#292929" />
+	<link rel="shortcut icon" href="iste_logo_start_tp.png">
+	<title>ISTE MANIT</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
 	<meta name="twitter:title" content="" />
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
@@ -38,7 +40,7 @@
 	<!-- Google Webfonts -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -51,286 +53,480 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	<link rel="stylesheet" href="nav.css" type="text/css">
+
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-	</head>
-	<body>
+</head>
+<style>
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	a:visited {
+		text-decoration: none;
+	}
+</style>
+
+<body>
+	<div class="icon menu-trigger is-hidden-tablet button is-large is-danger">
+		<i class="fas fa-bars"></i>
+	</div>
+	<div class="touch-menu is-hidden-tablet">
+		<div id="menu-overlay"></div>
+		<div class="container has-background-white has-border-radius-20 has-padding-10">
+			<aside class="menu">
+				<p class="menu-label has-padding-5">
+					Navigation Menu
+				</p>
+				<ul class="menu-list">
+					<li>
+						<a href="../index.html" class="has-text-semiboldmenu-link">
+							<span class="icon">
+								<i class="fas fa-home"></i>
+							</span>&nbsp;&nbsp;&nbsp;Home</a>
+					</li>
+					<li>
+						<a href="../index.html#section-2" class="has-text-semibold menu-link">
+							<span class="icon">
+								<i class="fas fa-info-circle"></i>
+							</span>&nbsp;&nbsp;&nbsp;About ISTE</a>
+					</li>
+					<li>
+						<a href="../index.html#section-3" class="has-text-semibold menu-link">
+							<span class="icon">
+								<i class="fas fa-building"></i>
+							</span>&nbsp;&nbsp;&nbsp;ISTE MANIT</a>
+					</li>
+					<li>
+						<a href="../index.html#section-4" class="has-text-semibold menu-link">
+							<span class="icon">
+								<i class="fas fa-calendar"></i>
+							</span>&nbsp;&nbsp;&nbsp;Events</a>
+					</li>
+					<li>
+						<a href="../index.html#section-5" class="has-text-semibold menu-link">
+							<span class="icon">
+								<i class="fas fa-address-book"></i>
+							</span>&nbsp;&nbsp;&nbsp;Contact Details</a>
+					</li>
+					<li>
+						<a href="#" class="has-text-semibold menu-link">
+							<span class="icon">
+								<i class="fas fa-file-image"></i>
+							</span>&nbsp;&nbsp;&nbsp;Gallery</a>
+					</li>
+					<li>
+						<a href="test.html" class="has-text-semibold is-active menu-link">
+							<span class="icon">
+								<i class="fas fa-users"></i>
+							</span>&nbsp;&nbsp;&nbsp;Alumni</a>
+					</li>
+				</ul>
+			</aside>
+		</div>
+	</div>
 	<div id="navbar-overlay"></div>
-    <nav class="navbar is-hidden-mobile is-fixed-top" id="main-nav" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand is-size-5">
-            <a class="navbar-item" href="#section-1">
-                <img src="iste_logo_start_tp.png" alt="ISTE Logo">
-                <span class="is-uppercase has-text-weight-semibold" style="padding-left:10px;">ISTE MANIT</span>
-            </a>
-            <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-        <div class="navbar-menu is-paddingless">
-            <div class="navbar-start">
-            </div>
-            <div class="navbar-end">
-                <a href="../index.html" class="navbar-item">
-                    <span class="icon is-hidden-desktop">
-                        <i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;
-                    </span>Home</a>
-                <a href="../index.html#section-2" class="navbar-item">
-                    <span class="icon is-hidden-desktop">
-                        <i class="fas fa-info-circle"></i>&nbsp;&nbsp;&nbsp;
-                    </span>About ISTE</a>
-                <a href="../index.html#section-3" class="navbar-item">
-                    <span class="icon is-hidden-desktop">
-                        <i class="fas fa-building"></i>&nbsp;&nbsp;&nbsp;
-                    </span>ISTE MANIT</a>
-                <a href="../index.html#section-4" class="navbar-item">
-                    <span class="icon is-hidden-desktop">
-                        <i class="fas fa-calendar"></i>&nbsp;&nbsp;&nbsp;
-                    </span>Events</a>
-                <a href="../index.html#section-5" class="navbar-item">
-                    <span class="icon is-hidden-desktop">
-                        <i class="fas fa-address-book"></i>&nbsp;&nbsp;&nbsp;
-                    </span>Contact Details</a>
-                <a href="#" class="navbar-item">
-                    <span class="icon is-hidden-desktop">
-                        <i class="fas fa-file-image"></i>&nbsp;&nbsp;&nbsp;
-                    </span>Gallery</a>
-                <a href="test.html" class="navbar-item is-active">
-                    <span class="icon is-hidden-desktop">
-                        <i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp;
-                    </span>Alumni</a>
-            </div>
-        </div>
-    </nav>
+	<nav class="navbar is-hidden-mobile is-fixed-top" id="main-nav" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand is-size-5">
+			<a class="navbar-item" href="#">
+				<img src="iste_logo_start_tp.png" alt="ISTE Logo">
+				<span class="is-uppercase has-text-weight-semibold has-padding-left-10">ISTE MANIT</span>
+			</a>
+			<a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+		<div class="navbar-menu is-paddingless">
+			<div class="navbar-start">
+			</div>
+			<div class="navbar-end">
+				<a href="../index.html" class="navbar-item">
+					<span class="icon is-hidden-desktop">
+						<i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;
+					</span>Home</a>
+				<a href="../index.html#section-2" class="navbar-item">
+					<span class="icon is-hidden-desktop">
+						<i class="fas fa-info-circle"></i>&nbsp;&nbsp;&nbsp;
+					</span>About ISTE</a>
+				<a href="../index.html#section-3" class="navbar-item">
+					<span class="icon is-hidden-desktop">
+						<i class="fas fa-building"></i>&nbsp;&nbsp;&nbsp;
+					</span>ISTE MANIT</a>
+				<a href="../index.html#section-4" class="navbar-item">
+					<span class="icon is-hidden-desktop">
+						<i class="fas fa-calendar"></i>&nbsp;&nbsp;&nbsp;
+					</span>Events</a>
+				<a href="../index.html#section-5" class="navbar-item">
+					<span class="icon is-hidden-desktop">
+						<i class="fas fa-address-book"></i>&nbsp;&nbsp;&nbsp;
+					</span>Contact Details</a>
+				<a href="#" class="navbar-item">
+					<span class="icon is-hidden-desktop">
+						<i class="fas fa-file-image"></i>&nbsp;&nbsp;&nbsp;
+					</span>Gallery</a>
+				<a href="test.html" class="navbar-item is-active">
+					<span class="icon is-hidden-desktop">
+						<i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp;
+					</span>Alumni</a>
+			</div>
+		</div>
+	</nav>
 	<header id="fh5co-header" role="banner">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<a class="navbar-brand" href="index.html">GALLERY</a>		
+					<a class="navbar-brand" href="index.html">GALLERY</a>
 				</div>
 			</div>
 		</div>
 	</header>
 	<!-- END .header -->
-	
-	
+
+
 	<div id="fh5co-main">
 		<div class="container">
 
 			<div class="row">
 
-        <div id="fh5co-board" data-columns>
+				<div id="fh5co-board" data-columns>
 
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_1.jpg" class="image-popup fh5co-board-img" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?"><img src="images/img_1.jpg" alt="Free HTML5 Bootstrap template"></a>
-        		</div>
-        		<div class="fh5co-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_2.jpg" class="image-popup fh5co-board-img"><img src="images/img_2.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Veniam voluptatum voluptas tempora debitis harum totam vitae hic quos.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_3.jpg" class="image-popup fh5co-board-img"><img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_4.jpg" class="image-popup fh5co-board-img"><img src="images/img_4.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Dolore itaque deserunt sit, at exercitationem delectus, consequuntur quaerat sapiente.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_5.jpg" class="image-popup fh5co-board-img"><img src="images/img_5.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Tempora distinctio inventore, nisi excepturi pariatur tempore sit quasi animi.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_6.jpg" class="image-popup fh5co-board-img"><img src="images/img_6.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Sequi, eaque suscipit accusamus. Necessitatibus libero, unde a nesciunt repellendus!</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_7.jpg" class="image-popup fh5co-board-img"><img src="images/img_7.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Necessitatibus distinctio eos ipsam cum hic temporibus assumenda deleniti, soluta.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_8.jpg" class="image-popup fh5co-board-img"><img src="images/img_8.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Debitis voluptatum est error nulla voluptate eum maiores animi quasi?</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_9.jpg" class="image-popup fh5co-board-img"><img src="images/img_9.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Maxime qui eius quisquam quidem quos unde consectetur accusamus adipisci!</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_21.jpg" class="image-popup fh5co-board-img"><img src="images/img_21.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Deleniti aliquid, accusantium, consectetur harum eligendi vitae quaerat reiciendis sit?</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_10.jpg" class="image-popup fh5co-board-img"><img src="images/img_10.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Incidunt, eaque et. Et odio excepturi, eveniet facilis explicabo assumenda.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_11.jpg" class="image-popup fh5co-board-img"><img src="images/img_11.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Laborum dolores nihil voluptates quas alias distinctio fugiat tempora sit.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_12.jpg" class="image-popup fh5co-board-img"><img src="images/img_12.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Sit, quis nulla amet numquam fugit, in reiciendis laboriosam dolor.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_13.jpg" class="image-popup fh5co-board-img"><img src="images/img_13.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Possimus explicabo voluptatem natus nisi similique ipsa repudiandae? Quibusdam, fuga.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_14.jpg" class="image-popup fh5co-board-img"><img src="images/img_14.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Magni repellendus iusto mollitia, quibusdam facilis incidunt. Sunt, repellat, voluptatem.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_15.jpg" class="image-popup fh5co-board-img"><img src="images/img_15.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Unde iure rerum cupiditate explicabo quam aut vel earum numquam.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_16.jpg" class="image-popup fh5co-board-img"><img src="images/img_16.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Qui nisi error dolorum dolor delectus, alias doloremque perspiciatis nemo.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_18.jpg" class="image-popup fh5co-board-img"><img src="images/img_18.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Neque porro vero cumque natus nam voluptatibus, ratione, commodi labore.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_17.jpg" class="image-popup fh5co-board-img"><img src="images/img_17.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Quisquam quia totam, sit ea maxime sint sed excepturi quod.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_19.jpg" class="image-popup fh5co-board-img"><img src="images/img_19.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Nesciunt non iste ex nemo sapiente eum, provident nam corporis.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_20.jpg" class="image-popup fh5co-board-img"><img src="images/img_20.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Harum repellat labore est cum ipsa, nesciunt neque mollitia adipisci?</div>
-        		</div>
-        	</div>
-        	
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_22.jpg" class="image-popup fh5co-board-img"><img src="images/img_22.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Quos repellendus repudiandae debitis reprehenderit cupiditate cumque accusamus exercitationem, harum.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_23.jpg" class="image-popup fh5co-board-img"><img src="images/img_23.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Sunt numquam itaque delectus, dignissimos dolorem obcaecati vel, atque eos.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_24.jpg" class="image-popup fh5co-board-img"><img src="images/img_24.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_25.jpg" class="image-popup fh5co-board-img"><img src="images/img_25.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Quos repellendus repudiandae debitis reprehenderit cupiditate cumque accusamus exercitationem, harum.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_26.jpg" class="image-popup fh5co-board-img"><img src="images/img_26.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Sunt numquam itaque delectus, dignissimos dolorem obcaecati vel, atque eos.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_27.jpg" class="image-popup fh5co-board-img"><img src="images/img_27.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_28.jpg" class="image-popup fh5co-board-img"><img src="images/img_28.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_29.jpg" class="image-popup fh5co-board-img"><img src="images/img_29.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.</div>
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="images/img_30.jpg" class="image-popup fh5co-board-img"><img src="images/img_30.jpg" alt="Free HTML5 Bootstrap template"></a>
-	        		<div class="fh5co-desc">Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.</div>
-        		</div>
-        	</div>
-        </div>
-        </div>
-       </div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_1.jpg" class="image-popup fh5co-board-img" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?">
+								<img src="images/img_1.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+						</div>
+						<div class="fh5co-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_2.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_2.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Veniam voluptatum voluptas tempora debitis harum totam vitae hic quos.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_3.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_3.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_4.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_4.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Dolore itaque deserunt sit, at exercitationem delectus, consequuntur quaerat sapiente.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_5.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_5.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Tempora distinctio inventore, nisi excepturi pariatur tempore sit quasi animi.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_6.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_6.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Sequi, eaque suscipit accusamus. Necessitatibus libero, unde a nesciunt repellendus!</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_7.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_7.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Necessitatibus distinctio eos ipsam cum hic temporibus assumenda deleniti, soluta.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_8.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_8.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Debitis voluptatum est error nulla voluptate eum maiores animi quasi?</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_9.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_9.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Maxime qui eius quisquam quidem quos unde consectetur accusamus adipisci!</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_21.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_21.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Deleniti aliquid, accusantium, consectetur harum eligendi vitae quaerat reiciendis sit?</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_10.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_10.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Incidunt, eaque et. Et odio excepturi, eveniet facilis explicabo assumenda.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_11.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_11.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Laborum dolores nihil voluptates quas alias distinctio fugiat tempora sit.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_12.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_12.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Sit, quis nulla amet numquam fugit, in reiciendis laboriosam dolor.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_13.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_13.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Possimus explicabo voluptatem natus nisi similique ipsa repudiandae? Quibusdam, fuga.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_14.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_14.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Magni repellendus iusto mollitia, quibusdam facilis incidunt. Sunt, repellat, voluptatem.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_15.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_15.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Unde iure rerum cupiditate explicabo quam aut vel earum numquam.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_16.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_16.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Qui nisi error dolorum dolor delectus, alias doloremque perspiciatis nemo.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_18.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_18.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Neque porro vero cumque natus nam voluptatibus, ratione, commodi labore.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_17.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_17.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Quisquam quia totam, sit ea maxime sint sed excepturi quod.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_19.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_19.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Nesciunt non iste ex nemo sapiente eum, provident nam corporis.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_20.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_20.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Harum repellat labore est cum ipsa, nesciunt neque mollitia adipisci?</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_22.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_22.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Quos repellendus repudiandae debitis reprehenderit cupiditate cumque accusamus exercitationem, harum.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_23.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_23.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Sunt numquam itaque delectus, dignissimos dolorem obcaecati vel, atque eos.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_24.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_24.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_25.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_25.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Quos repellendus repudiandae debitis reprehenderit cupiditate cumque accusamus exercitationem, harum.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_26.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_26.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Sunt numquam itaque delectus, dignissimos dolorem obcaecati vel, atque eos.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_27.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_27.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_28.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_28.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_29.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_29.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="animate-box">
+							<a href="images/img_30.jpg" class="image-popup fh5co-board-img">
+								<img src="images/img_30.jpg" alt="Free HTML5 Bootstrap template">
+							</a>
+							<div class="fh5co-desc">Adipisci consequuntur ipsa fugit perspiciatis eligendi. Omnis blanditiis, totam placeat.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
-	
+	<<<<<<< HEAD=======< div class="section is-large">
+		</div>
+		<section class="section has-background-dark is-unselectable has-text-white" id="section-5">
+			<div class="my-footer columns is-multiline is-centered">
+				<div class="column is-3">
+					<h1 class="is-size-3 is-italic is-capitalized" style="color: white;">Reach out to us at:</h1>
+					<br>
+					<a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+						<span class="icon">
+							<i class="fab fa-facebook-f"></i>
+						</span>
+					</a>
+					<a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+						<span class="icon">
+							<i class="fas fa-envelope"></i>
+						</span>
+					</a>
+					<a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+						<span class="icon">
+							<i class="fab fa-instagram"></i>
+						</span>
+					</a>
+				</div>
+				<div class="column is-3">
+					<h1 class="is-size-3 is-italic heading has-text-white is-capitalized">Write to us at:</h1>
+					<br>
+					<p class="is-italic">
+						Maulana Azad National Institute of Technology,
+						<br> Bhopal, Madhya Pradesh - 462003
+						<br>India
+					</p>
+				</div>
+				<div class="column is-3">
+					<h1 class="is-size-3 is-italic heading has-text-white is-capitalized">Call us at:</h1>
+					<br>
+					<p class="is-italic">
+						Utkarsh Bajpai : +91 8085240619
+						<br>Atul Garg : +91 9755236855
+					</p>
+				</div>
+			</div>
+			<div class="container has-text-centered-tablet is-borderless">
+				<div>
+					<a href="#" id="top-button" class="button is-hidden-fullhd is-outlined is-inverted is-dark">
+						<span class="icon">
+							<i class="fas fa-angle-double-up"></i>&nbsp;&nbsp;&nbsp;
+						</span>
+						Go to Top</a>
+					<a href="#" id="top-button" class="button is-large is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only is-hidden-widescreen-only is-outlined is-inverted is-dark">
+						<span class="icon">
+							<i class="fas fa-angle-double-up"></i>&nbsp;&nbsp;&nbsp;
+						</span>
+						Go to Top</a>
+				</div>
+				<br>
+				<div class="has-text-grey">
+					<b class="is-capitalized">all rights reserved.&nbsp;</b>
+					<span class="is-uppercase">ISTE SC MANIT</span>
+				</div>
+			</div>
+		</section>
+		>>>>>>> 8cc8ed3648f5214c5fecb43d490610f8f91d28ea
+
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Magnific Popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- Salvattore -->
+		<script src="js/salvattore.min.js"></script>
+		<!-- Main JS -->
+		<script src="js/main.js"></script>
 
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<!-- Salvattore -->
-	<script src="js/salvattore.min.js"></script>
-	<!-- Main JS -->
-	<script src="js/main.js"></script>
 
-	
 
-	
-	</body>
+</body>
+
 </html>

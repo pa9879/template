@@ -2,9 +2,14 @@
 @import "../../bulma/bulma.sass";
 @import "bordersAndSpacing.scss";
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Courgette');
 *::selection {
-    background-color: $danger;
+    background-color: $dark;
     color: white;
+}
+
+strong {
+    color: inherit;
 }
 
 #preloader-overlay {
@@ -160,6 +165,10 @@ section {
     }
 }
 
+.rounded-nav {
+    border-radius: 0 0 50% 50%;
+}
+
 #navbar-overlay {
     cursor: pointer;
     display: none;
@@ -173,15 +182,16 @@ section {
 }
 
 #main-nav {
+    padding: 20px 20px 40px 20px;
     z-index: 1500;
     visibility: hidden;
     opacity: 0;
-    .navbar-menu .navbar-item:hover,
-        {
-        transition: 500ms;
+    .navbar-menu .navbar-item:hover {
+        transition: 200ms;
     }
     .navbar-brand .navbar-item:hover {
         color: #fff;
+        border: none
     }
     .container {
         display: none;
@@ -236,7 +246,7 @@ section {
 .hero-heavy {
     font-size: 5em;
     color: white;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Courgette', cursive;
 }
 
 #hero-top {
@@ -270,7 +280,7 @@ section {
     align-items: center;
     justify-content: center;
     padding: 100px 50px;
-    margin-left: 51%;
+    margin-left: 50%;
     min-height: 100vh;
 }
 
@@ -281,7 +291,7 @@ section {
     justify-content: center;
     position: relative;
     margin: 0;
-    margin-right: 51%
+    margin-right: 50%
 }
 
 .divider-small {
@@ -293,10 +303,7 @@ section {
     position: relative;
 }
 
-@media only screen and (max-width: 768px) {
-    #main-nav {
-        display: none;
-    }
+@media only screen and (max-width: $tablet - 1) {
     .my-content {
         margin: 0 !important;
     }
@@ -381,6 +388,25 @@ section {
     transform-style: preserve-3d;
     transform: rotateY(0deg);
     transition: 500ms;
+}
+
+@media only screen and (min-width: $desktop) {
+    #main-nav {
+        padding: 20px 50px 50px;
+        .navbar-item.is-active,
+        .navbar-item.is-active:hover {
+            border-bottom: solid 5px white;
+            margin-bottom: -5px;
+            background: $dark;
+            color: $white;
+        }
+        .navbar-item:hover {
+            border-bottom: solid 5px white;
+            margin-bottom: -5px;
+            background: $dark;
+            color: $white;
+        }
+    }
 }
 
 @media only screen and (min-width: $fullhd) {
