@@ -436,9 +436,9 @@ $(document).ready(function () {
                 $("#third-a").animate({
                     "width": "20vw"
                 }, 200);
-                $("#third-b").css({
+                $("#third-b").animate({
                     "margin-left": "20vw"
-                });
+                }, 200);
                 $(".my-card-holder").each(function () {
                     $(this).css({
                         "display": "none"
@@ -455,9 +455,9 @@ $(document).ready(function () {
         $("#third-a").animate({
             "width": "50%"
         }, 200);
-        $("#third-b").css({
+        $("#third-b").animate({
             "margin-left": "50%"
-        });
+        }, 200);
         $("#third-a h1").animate({
             "opacity": "1",
         }, 300);
