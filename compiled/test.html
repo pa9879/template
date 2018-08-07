@@ -13,6 +13,7 @@
     <meta name="theme-color" content="#292929" />
     <link rel="stylesheet" href="nav.css" type="text/css">
     <link rel="shortcut icon" href="iste_logo_start_tp.png">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <title>ISTE MANIT</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
@@ -22,7 +23,7 @@
     body{
         margin: 0;
         padding: 0;
-        height: 2000px;
+        height: 1800px;
     }
     .containr{
         padding: auto;
@@ -34,12 +35,13 @@
     .box{
         display: block;
         width: 20%;
-        height: 300px;
+        height: 350px;
         margin-top: 60px;
         margin-bottom: 30px;
         margin-left: 4%;
         position: relative;
-        font-size: 22px;
+        font-size: 20px;
+        font-weight: bold;
         text-align: center;
         float:left;
         box-shadow: 0px 0px 8px grey;
@@ -49,32 +51,26 @@
         background-color: black;
         color: white;
     }
-    .box:hover .circle{
-        width: 100px;
-        height: 100px;
-    }
-    .box:hover .circle img{
-        width: 100px;
-        height: 100px;
-    }
     .circle{
         display: block;
-        background-color: red;
-        width: 150px;
-        height: 150px;
-        margin: -50px auto;
-        border-radius: 150px;
+        background-color: none;
+        width: 100%;
+        height: auto;
+        margin: 0px auto;
+    
     }
     .circle img{
-        width: 150px;
-        height: 150px;
+        width: 100%;
+        height: auto;
+         margin: 0px auto;
         overflow: hidden;
-        border-radius: 150px;
+       
     }
     .fb{
         width : 60px;
         height: 60px;
         margin-left: 25%;
+        margin-top: -60px;
         display: none;
     }
     .linked
@@ -98,6 +94,9 @@
     .box:hover .linked{
         display: block;
     }
+    .box:hover .name{
+        margin-top: 5px;
+    }
     .fb img:hover{
         filter: invert(100%);
         border: 2px solid black;
@@ -113,12 +112,12 @@
         text-align: center;
         font-size: 24px;
         margin-top: 100px;
-        font-family: Ailerons;
+        font-family: 'Raleway', sans-serif;
     }
     .name{
         display: block-inline;
-        margin: 55px 0px auto;
-        font-family: Bebas Neue;
+        margin: 35px 0px auto;
+        font-family: 'Raleway', sans-serif;
     }
     .cont{
         display: inline-block;
@@ -127,10 +126,11 @@
         font-size: 16px;
     }
     .headw{
+        position: absolute;
         width: 100%;
         height: 50px;
         display: box;
-        margin-top: -50px;
+        margin-top: 350px;
         opacity: 0;
     }
     .button
@@ -140,7 +140,7 @@
     }
     @media screen and (max-width: 2000px){
         .containr{
-            height: 1850px;
+            height: 1650px;
         }
     }
     @media screen and (max-width: 1300px){
@@ -158,7 +158,7 @@
             margin-left: 10%;
         }
         .containr{
-            height: 4600px;
+            height: 4300px;
         }
     }
     @media screen and (max-width: 640px){
@@ -167,7 +167,7 @@
             margin-left: 10%;
         }
         .containr{
-            height: 9300px;
+            height: 8800px;
         }
     }
 </style>
@@ -214,13 +214,13 @@
                             </span>&nbsp;&nbsp;&nbsp;Contact Details</a>
                     </li>
                     <li>
-                        <a href="#" class="has-text-semibold menu-link">
+                        <a href="index.html" class="has-text-semibold menu-link">
                             <span class="icon">
                                 <i class="fas fa-file-image"></i>
                             </span>&nbsp;&nbsp;&nbsp;Gallery</a>
                     </li>
                     <li>
-                        <a href="test.html" class="has-text-semibold is-active menu-link">
+                        <a href="#" class="has-text-semibold is-active menu-link">
                             <span class="icon">
                                 <i class="fas fa-users"></i>
                             </span>&nbsp;&nbsp;&nbsp;Alumni</a>
@@ -266,7 +266,7 @@
                     <span class="icon is-hidden-desktop">
                         <i class="fas fa-address-book"></i>&nbsp;&nbsp;&nbsp;
                     </span>Contact Details</a>
-                <a href="#" class="navbar-item">
+                <a href="index.html" class="navbar-item">
                     <span class="icon is-hidden-desktop">
                         <i class="fas fa-file-image"></i>&nbsp;&nbsp;&nbsp;
                     </span>Gallery</a>
@@ -320,7 +320,7 @@
             </a>
         </div>
         <div class="linked">
-            <a href="linkedin.com/in/julian-steeve-tirkey-35532511b " class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+            <a href="https://linkedin.com/in/julian-steeve-tirkey-35532511b " class="button has-margin-5 is-dark is-large is-outlined is-inverted">
                 <span class="icon">
                     <i class="fab fa-linkedin"></i>
                 </span>
@@ -344,7 +344,7 @@
             </a>
         </div>
         <div class="linked">
-            <a href="linkedin.com/in/utkarsh-bajpai-288455147 " class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+            <a href="https://linkedin.com/in/utkarsh-bajpai-288455147 " class="button has-margin-5 is-dark is-large is-outlined is-inverted">
                 <span class="icon">
                     <i class="fab fa-linkedin"></i>
                 </span>
@@ -368,7 +368,7 @@
             </a>
         </div>
         <div class="linked">
-            <a href="linkedin.com/in/arvinddhakad " class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+            <a href="https://linkedin.com/in/arvinddhakad " class="button has-margin-5 is-dark is-large is-outlined is-inverted">
                 <span class="icon">
                     <i class="fab fa-linkedin"></i>
                 </span>
@@ -416,7 +416,7 @@
             </a>
         </div>
         <div class="linked">
-            <a href="linkedin.com/in/kratik-agrawal" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+            <a href="https://linkedin.com/in/kratik-agrawal" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
                 <span class="icon">
                     <i class="fab fa-linkedin"></i>
                 </span>
@@ -426,7 +426,7 @@
     <div class="box" id="header5">
         <div class="headw"></div>
         <div class="circle">
-            <img src="images\Prashant Gaitonde.jpg">
+            <img src="images\img.png">
         </div>
         <div class="name">Prashant Gaitonde</div>
         <div class="cont"><br><br>
@@ -440,7 +440,7 @@
             </a>
         </div>
         <div class="linked">
-            <a href="linkedin.com/in/prashant98934" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+            <a href="https://linkedin.com/in/prashant98934" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
                 <span class="icon">
                     <i class="fab fa-linkedin"></i>
                 </span>
@@ -464,7 +464,7 @@
             </a>
         </div>
         <div class="linked">
-            <a href="linkedin.com/in/palak-dubey" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+            <a href="https://linkedin.com/in/palak-dubey" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
                 <span class="icon">
                     <i class="fab fa-linkedin"></i>
                 </span>
@@ -488,7 +488,7 @@
             </a>
         </div>
         <div class="linked">
-            <a href="linkedin.com/in/akshay-punwatkar-88558b63" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+            <a href="https://linkedin.com/in/akshay-punwatkar-88558b63" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
                 <span class="icon">
                     <i class="fab fa-linkedin"></i>
                 </span>
@@ -560,7 +560,7 @@
             </a>
         </div>
         <div class="linked">
-            <a href="linkedin.com/in/satya-sravan-s-747a3056" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+            <a href="https://linkedin.com/in/satya-sravan-s-747a3056" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
                 <span class="icon">
                     <i class="fab fa-linkedin"></i>
                 </span>
@@ -684,7 +684,7 @@
             </a>
         </div>
         <div class="linked">
-            <a href="linkedin.com/in/vivek-malviya-74667367" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+            <a href="https://linkedin.com/in/vivek-malviya-74667367" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
                 <span class="icon">
                     <i class="fab fa-linkedin"></i>
                 </span>
@@ -756,109 +756,14 @@
             </a>
         </div>
         <div class="linked">
-            <a href="linkedin.com/in/maheshbonde" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
+            <a href="https://linkedin.com/in/maheshbonde" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
                 <span class="icon">
                     <i class="fab fa-linkedin"></i>
                 </span>
             </a>
         </div>
     </div>
-    <div class="box" id="header16">
-        <div class="headw"></div>
-        <div class="circle">
-            <img src="1.jpg">
-        </div>
-        <div class="name">DANIEL NIELSEN</div>
-        <div class="cont"><br><br>
-              
-        </div>
-        <div class="fb">
-            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
-                <span class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                </span>
-            </a>
-        </div>
-        <div class="linked">
-            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
-                <span class="icon">
-                    <i class="fab fa-linkedin"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-    <div class="box" id="header17">
-        <div class="headw"></div>
-        <div class="circle">
-            <img src="1.jpg">
-        </div>
-        <div class="name">DANIEL NIELSEN</div>
-        <div class="cont"><br><br>
-              
-        </div>
-    <div class="fb">
-            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
-                <span class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                </span>
-            </a>
-        </div>
-        <div class="linked">
-            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
-                <span class="icon">
-                    <i class="fab fa-linkedin"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-    <div class="box" id="header18">
-        <div class="headw"></div>
-        <div class="circle">
-            <img src="1.jpg">
-        </div>
-        <div class="name">DANIEL NIELSEN</div>
-        <div class="cont"><br><br>
-              
-        </div>
-        <div class="fb">
-            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
-                <span class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                </span>
-            </a>
-        </div>
-        <div class="linked">
-            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
-                <span class="icon">
-                    <i class="fab fa-linkedin"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-    <div class="box" id="header19">
-        <div class="headw"></div>
-        <div class="circle">
-            <img src="1.jpg">
-        </div>
-        <div class="name">DANIEL NIELSEN</div>
-        <div class="cont"><br><br>
-              
-        </div>
-        <div class="fb">
-            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
-                <span class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                </span>
-            </a>
-        </div>
-        <div class="linked">
-            <a href="#" class="button has-margin-5 is-dark is-large is-outlined is-inverted">
-                <span class="icon">
-                    <i class="fab fa-linkedin"></i>
-                </span>
-            </a>
-        </div>
-    </div>
+   
     </div>
     <div class="section is-large"></div>
     <section class="section has-background-dark is-unselectable has-text-white" id="section-5">
@@ -901,18 +806,6 @@
             </div>
         </div>
         <div class="container has-text-centered-tablet is-borderless">
-            <div>
-                <a href="#" id="top-button" class="button is-hidden-fullhd is-outlined is-inverted is-dark">
-                    <span class="icon">
-                        <i class="fas fa-angle-double-up"></i>&nbsp;&nbsp;&nbsp;
-                    </span>
-                    Go to Top</a>
-                <a href="#" id="top-button" class="button is-large is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only is-hidden-widescreen-only is-outlined is-inverted is-dark">
-                    <span class="icon">
-                        <i class="fas fa-angle-double-up"></i>&nbsp;&nbsp;&nbsp;
-                    </span>
-                    Go to Top</a>
-            </div>
             <br>
             <div class="has-text-grey">
                 <b class="is-capitalized">all rights reserved.&nbsp;</b>

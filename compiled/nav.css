@@ -5874,4 +5874,8 @@ a.navbar-item,
   border: none;
   border-top: solid 5px #7a7a7a; }
 
+.top-button{
+  width: : auto !important;
+}
+
 /*# sourceMappingURL=nav.css.map */

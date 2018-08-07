@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
 @import url("https://fonts.googleapis.com/css?family=Dancing+Script");
 @import url("https://fonts.googleapis.com/css?family=Courgette");
@@ -16,7 +16,10 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-
+.info-button
+{
+  visibility: hidden;
+}
 .select:not(.is-multiple):not(.is-loading)::after, .navbar-link::after {
   border: 3px solid transparent;
   border-radius: 2px;
